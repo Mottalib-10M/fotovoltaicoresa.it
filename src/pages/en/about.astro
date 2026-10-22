@@ -1,0 +1,29 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { YEAR, LAST_UPDATED, AUTHOR_NAME, CONTACT_EMAIL, AUTHOR_ROLE, SITE_NAMES, LANG_TAGS } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+import { personSchema, organizationSchema, breadcrumbSchema, profilePageSchema } from '../../lib/seo';
+import { displayDate, formatNumber } from '../../lib/format';
+import { ITALIA } from '../../lib/engine/params';
+const lang = 'en';
+---
+<PageLayout title="Solar Calculator Italy 2026: Who Publishes It, Which Data" description="About us in 2026: who runs the Italian solar calculator by comune, where output, use and prices come from and how the sums are checked, with no sales." lang={lang} jsonLd={[personSchema(lang), organizationSchema(lang), profilePageSchema({ path: route('about', lang), lang }), breadcrumbSchema([{ name: 'Home', path: route('home', lang) }, { name: 'About', path: route('about', lang) }])]} breadcrumbs={[{ label: 'About' }]}>
+  <header class="mb-6"><h1 class="text-3xl font-bold text-navy-900 md:text-4xl">About {SITE_NAMES.en}</h1></header>
+  <div class="prose prose-slate max-w-none">
+    <div class="not-prose mb-6"><p class="text-lg font-semibold text-navy-900">{AUTHOR_NAME}</p><p class="text-navy-700">{AUTHOR_ROLE[lang]}</p></div>
+    <p>{SITE_NAMES.en} is published by Radif Partners. This site gives the output of a solar system in your Italian comune, how much of that power you will use at home, what the surplus sold to the grid is worth and how many years the outlay takes to pay back. It sells no systems, asks for no phone number or email and follows the 2026 rules: net metering (scambio sul posto) has been closed to new applications since September 2025.</p>
+    <h2>How we calculate</h2>
+    <p>We calculate with PVGIS output for {formatNumber(ITALIA.n_comuni, 0, lang)} comuni, one by one; with the hourly household consumption metered by ARERA instead of a fixed percentage; with the ritiro dedicato prices the GSE publishes for your zone; and with the tax deduction as the Agenzia delle Entrate describes it. The result appears before you type anything and changes with every input.</p>
+    <h2>How we check</h2>
+    <p>Automated tests run before every release: the energy balance of every calculation, the deduction, the GSE fee and the energy community premium. How each figure is produced is set out in <a href={route('method', lang)}>How we calculate</a>.</p>
+    <h2>What we are not</h2>
+    <p>We are not installers, energy suppliers or grid operators, nor the GSE, ARERA or the Agenzia delle Entrate, and we do not speak for them. We sell no systems, pass no requests to anyone and take no money for a recommendation.</p>
+    <h2>Funding and your data</h2>
+    <p>The calculator is free and needs no account. Comune, consumption and prices stay in your browser. Should the site ever show advertising, it would never sit above a calculator.</p>
+    <h2>Why in English</h2>
+    <p>Every page also exists in English, written for people who live in Italy and are learning the Italian terms: ritiro dedicato, scambio sul posto and detrazione are explained, amounts stay in euros.</p>
+    <h2>Contact</h2>
+    <p>A value looks wrong, a sentence is out of date, your system produces something else? Write to <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. See also the <a href={route('editorial', lang)}>editorial policy</a> and the <a href={route('terms', lang)}>legal notice</a>.</p>
+    <p class="text-sm text-navy-600">Data {YEAR}, read on <time datetime={LAST_UPDATED}>{displayDate(LAST_UPDATED, LANG_TAGS[lang])}</time>.</p>
+  </div>
+</PageLayout>

@@ -1,0 +1,114 @@
+---
+/** Come calcoliamo (pagina di fiducia, RECETTE §8.2): dati, passaggi, verifiche, limiti, tutte le fonti. */
+import PageLayout from '../layouts/PageLayout.astro';
+import { route, type Locale } from '../i18n/routes';
+import { P, REG, ITALIA, RID, REGIONI, PROVINCE } from '../lib/engine/params';
+import { PREZZO_EVITATO_CT, prezzoEvitatoTrim } from '../lib/engine/fv';
+import { formatNumber, formatPercent, displayDate } from '../lib/format';
+import { breadcrumbSchema, webPageSchema, faqSchema } from '../lib/seo';
+import { CONTACT_EMAIL, REVIEW_CYCLE_MONTHS, LANG_TAGS } from '../data/site-config';
+interface Props { lang: Locale }
+const { lang } = Astro.props;
+const it = lang === 'it';
+const n = (x: number, d = 0) => formatNumber(x, d, lang);
+const pc = (x: number, d = 0) => formatPercent(x, d, lang);
+const dt = (iso: string) => displayDate(iso, LANG_TAGS[lang]);
+const title = it ? 'Metodo di calcolo fotovoltaico 2026: dati, passaggi, limiti' : 'Solar Calculation Method 2026: Data, Steps and Known Limits';
+const description = it ? 'Metodo 2026: PVGIS per 7 896 comuni, matrice di orientamento, autoconsumo orario dai prelievi ARERA, prezzi del ritiro dedicato GSE, detrazione e limiti.' : 'Method 2026: PVGIS for 7,896 comuni, orientation matrix, hourly self-consumption from ARERA withdrawals, GSE export prices, the tax deduction and limits.';
+const h1 = it ? 'Come calcoliamo' : 'How we calculate';
+const path = route('method', lang);
+const sources = Object.values(P.sources);
+const w = P.rid.pesi_fasce;
+const cap = REGIONI.map((r) => r.capoluogo_ac).join(', ');
+const faqs = it ? [
+  { q: 'Perché il risultato è diverso dal preventivo dell\'installatore?', a: `Usiamo PVGIS 5.3 con il ${n(P.modello.perdite_pct)} % di perdite, i profili orari medi ARERA della regione e il costo di riferimento del decreto CER. Un installatore può usare un altro database solare, il profilo reale della vostra casa e il suo prezzo. Inserite nel simulatore il costo del preventivo, l'orientamento e il consumo reale: se lo scarto resta oltre il 10 %, chiedete da dove viene la sua stima.` },
+  { q: 'Ogni quanto vengono aggiornati i dati?', a: `I prezzi del ritiro dedicato ogni mese, dopo che il GSE li pubblica entro il 22 del mese successivo; uno script controlla il file e aggiorna i dati. Le condizioni ARERA ogni trimestre, il prezzo minimo garantito e la detrazione ogni anno o quando cambia la legge. La produzione PVGIS cambia solo con una nuova versione del servizio. La data dell'ultimo aggiornamento è indicata in questa pagina.` },
+  { q: 'Il calcolo tiene conto del degrado dei pannelli e dell\'inflazione?', a: `No. Produzione e prezzi restano costanti per vent'anni, senza sconto finanziario, manutenzione né sostituzione dell'inverter. È una scelta voluta per rendere confrontabili i casi: degrado e manutenzione abbassano il beneficio, prezzi dell'energia più alti lo alzano. Il saldo a vent'anni va letto come ordine di grandezza, non come promessa di rendimento.` },
+  { q: 'Il simulatore salva i miei dati?', a: `No. Il calcolo avviene nel browser e i valori inseriti restano nell'indirizzo della pagina, così potete copiarlo e ritrovare la stessa simulazione. Non chiediamo nome, email o telefono, non passiamo contatti a installatori e non usiamo moduli di richiesta. L'elenco dei comuni viene scaricato una volta come file statico dal sito stesso.` },
+] : [
+  { q: 'Why does the result differ from the installer\'s quote?', a: `We use PVGIS 5.3 with ${n(P.modello.perdite_pct)}% losses, ARERA's average regional hourly profiles and the energy community decree's reference cost. An installer may use another solar database, your home's real profile and their own price. Enter the quote's cost, the orientation and your real use in the calculator: if the gap stays above 10%, ask where their estimate comes from.` },
+  { q: 'How often are the data updated?', a: `Ritiro dedicato prices every month, after the GSE publishes them by the 22nd of the following month; a script checks the file and updates the data. ARERA conditions every quarter, the guaranteed minimum price and the deduction every year or when the law changes. PVGIS output only changes with a new version of the service. The date of the latest update is shown on this page.` },
+  { q: 'Does the calculation account for panel degradation and inflation?', a: `No. Output and prices stay constant for twenty years, with no financial discounting, maintenance or inverter replacement. This is deliberate, to make cases comparable: degradation and maintenance lower the benefit, higher energy prices raise it. The twenty-year balance should be read as an order of magnitude, not as a promised return.` },
+  { q: 'Does the calculator store my data?', a: `No. The calculation runs in the browser and the values you enter stay in the page address, so you can copy it and find the same simulation again. We ask for no name, email or phone, pass no contacts to installers and use no request forms. The list of comuni is downloaded once as a static file from the site itself.` },
+];
+---
+<PageLayout title={title} description={description} lang={lang} faqs={faqs} jsonLd={[webPageSchema({ name: h1, description, path, lang }), faqSchema(faqs, lang), breadcrumbSchema([{ name: it ? 'Inizio' : 'Home', path: route('home', lang) }, { name: h1, path }])]} breadcrumbs={[{ label: h1 }]}>
+  <header class="mb-6"><h1 class="text-3xl font-bold text-navy-900 md:text-4xl">{h1}</h1></header>
+  {it ? (
+  <div class="prose prose-slate max-w-none">
+    <p>Ogni numero del sito viene da un file di dati costruito da uno script della cartella <code>scripts/data</code> a partire da una fonte ufficiale, con la data di lettura. Simulatori e testi leggono solo da quei file: quando cambia un prezzo o un'aliquota, cambia su tutte le pagine insieme, e gli esempi dei testi si ricalcolano a ogni pubblicazione.</p>
+    <h2>1. Produzione: PVGIS per ogni comune</h2>
+    <p>Il {dt(REG.source.pvgis_retrieved_at)} abbiamo interrogato l'API PVcalc di PVGIS 5.3, il servizio del Centro comune di ricerca della Commissione europea, per ciascuno dei {n(ITALIA.n_comuni)} comuni dell'elenco GeoNames (codici ISTAT, licenza CC BY 4.0), alle coordinate del comune: 1 kWp di silicio cristallino, {n(P.modello.perdite_pct)} % di perdite, 30 gradi verso sud, banca dati di irraggiamento SARAH-3 dal 2005 al 2023, orizzonte calcolato dal modello del terreno. La media italiana pesata sulla popolazione è {n(ITALIA.ey)} kWh per kWp; i valori vanno da {n(ITALIA.ey_min)} ({ITALIA.min_nome}) a {n(ITALIA.ey_max)} ({ITALIA.max_nome}). Le medie delle {n(PROVINCE.length)} province e delle 20 regioni sono pesate sulla popolazione dei comuni. Le sigle delle province sono quelle di GeoNames: il riordino delle province sarde del 2025 non vi compare.</p>
+    <h2>2. Orientamento e inclinazione</h2>
+    <p>In sei punti di riferimento (Milano, Padova, Umbria, Basilicata, Sicilia centrale e Sardegna centrale) abbiamo chiesto a PVGIS la produzione per 11 inclinazioni da 10 a 90 gradi e 8 orientamenti, più il piano orizzontale: 89 combinazioni per punto. Ogni regione usa il punto più vicino. La vostra produzione è il valore del comune a 30 gradi sud moltiplicato per il rapporto fra il vostro orientamento e 30 gradi sud, con interpolazione lineare fra i punti della griglia.</p>
+    <h2>3. Autoconsumo ora per ora</h2>
+    <p>Per ogni regione abbiamo scaricato la serie oraria PVGIS 2019-2023 nel capoluogo ({cap}) e l'abbiamo confrontata, ora per ora, con il prelievo medio orario delle famiglie residenti misurato da ARERA nel 2025 per regione, mese e tipo di giorno (feriale, sabato, domenica e festivi). I profili sono due: potenza impegnata 1,5-3 kW e 3-4,5 kW; il simulatore usa il primo sotto i {n(P.modello.consumo_soglia_profilo)} kWh l'anno e il secondo sopra. La batteria si carica solo dal surplus, con rendimento di andata e ritorno del {pc(P.modello.batteria_rendimento)} e capacità utile del {pc(P.modello.batteria_utile)}. Il risultato è una tabella per regione con {REG.p.length} rapporti produzione/consumo e {REG.b.length} taglie di batteria; il simulatore interpola fra i valori. Con produzione pari al consumo e senza batteria la quota autoconsumata va dal {pc(Math.min(...REGIONI.map((r) => r.sc_base[9][0])))} al {pc(Math.max(...REGIONI.map((r) => r.sc_base[9][0])))} secondo la regione.</p>
+    <p>Il consumo proposto è la media 2025 delle famiglie residenti della regione con 3-4,5 kW (in Italia {n(ITALIA.cons_alto)} kWh; con 1,5-3 kW {n(ITALIA.cons_base)} kWh). È un profilo medio: smussa i picchi di una singola casa, quindi l'autoconsumo reale di una famiglia può essere più alto o più basso.</p>
+    <h2>4. Valore in euro</h2>
+    <ul>
+      <li><strong>Energia consumata in casa</strong>: evita materia energia, oneri generali e imposte del cliente tipo vulnerabile ARERA, media dei quattro trimestri 2026: {P.prezzo_evitato.trimestri.map((t) => `${t.t} ${n(prezzoEvitatoTrim(t), 2)}`).join(' · ')} c€/kWh, in media {n(PREZZO_EVITATO_CT, 2)} c€/kWh. Trasporto e commercializzazione non sono contati perché in gran parte fissi o legati alla potenza.</li>
+      <li><strong>Energia immessa</strong>: prezzi medi mensili del ritiro dedicato 2026 pubblicati dal GSE per zona e fascia, da gennaio a {RID.ultimo_mese}; pesati con la quota della produzione solare in F1 ({pc(w.F1, 1)}), F2 ({pc(w.F2, 1)}) e F3 ({pc(w.F3, 1)}), calcolata da noi sulle serie orarie PVGIS, e con la produzione di ciascun mese; mai sotto il prezzo minimo garantito di {n(P.rid.pmg_eur_mwh, 1)} €/MWh. Il GSE paga in realtà il prezzo zonale ora per ora: la nostra è un'approssimazione.</li>
+      <li><strong>Corrispettivo GSE</strong>: {n(P.rid.fee_eur_kw[0].eur, 2)} € per kW all'anno fino a 20 kW, {n(P.rid.fee_eur_kw[1].eur, 2)} fino a 200 kW, nessuno fino a {n(P.rid.fee_esente_fino_kw)} kW.</li>
+      <li><strong>Costo</strong>: se non inserite un preventivo usiamo {n(P.costi.fv_eur_kw)} € per kW (costo massimo di riferimento del decreto CER fino a 20 kW, IVA esclusa) e {n(P.costi.accumulo_eur_kwh)} € per kWh di batteria (limite di spesa del DL 34/2020). Sono riferimenti di legge, non prezzi di mercato.</li>
+      <li><strong>Detrazione</strong>: {pc(P.detrazione.aliquota_prima_casa)} o {pc(P.detrazione.aliquota_altri)} della spesa fino a {n(P.detrazione.tetto_eur)} €, in {P.detrazione.rate} rate annuali.</li>
+      <li><strong>Rientro</strong>: si sommano anno per anno beneficio e rata di detrazione fino a coprire il costo; prezzi e produzione costanti.</li>
+    </ul>
+    <h2>5. Verifiche prima di ogni pubblicazione</h2>
+    <ul>
+      <li>Bilancio energetico: autoconsumo più immissione uguale produzione, in ogni combinazione; la quota autoconsumata scende con la taglia e sale con la batteria.</li>
+      <li>Detrazione, corrispettivo GSE e tariffa premio CER controllati su casi calcolati a mano.</li>
+      <li>Dati: 20 regioni, {n(PROVINCE.length)} province, {n(ITALIA.n_comuni)} comuni, 7 zone di mercato con gli stessi mesi.</li>
+    </ul>
+    <h2>Che cosa il simulatore non sa</h2>
+    <ul>
+      <li>Le ombre del vostro tetto: alberi, camini e palazzi vicini non sono nel modello del terreno; la scelta « ombra » è una riduzione forfettaria.</li>
+      <li>Il degrado dei moduli e l'andamento futuro dei prezzi: il calcolo li tiene costanti.</li>
+      <li>La vostra situazione fiscale: la detrazione serve solo se avete IRPEF sufficiente ogni anno.</li>
+      <li>Le regole tecniche di connessione del vostro distributore e i costi di eventuali pratiche edilizie.</li>
+      <li>I prezzi del ritiro dedicato dei mesi non ancora pubblicati: il GSE li aggiorna dal giorno 22 del mese successivo.</li>
+    </ul>
+    <h2>Aggiornamento</h2>
+    <p>Uno script controlla ogni mese i prezzi del ritiro dedicato del GSE e ogni trimestre i prezzi ARERA, e ricostruisce il sito se qualcosa cambia. Una revisione completa dei testi avviene almeno ogni {REVIEW_CYCLE_MONTHS} mesi e a ogni cambio di legge. Segnalate errori a <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
+    <h2>Fonti</h2>
+    <ul>{sources.map((s) => <li><a href={s.url} rel="nofollow noopener" target="_blank">{s.label.it}</a></li>)}</ul>
+  </div>
+  ) : (
+  <div class="prose prose-slate max-w-none">
+    <p>Every figure on this site comes from a data file that a script in <code>scripts/data</code> builds from an official source, with the date it was read. Calculators and texts read only from those files: when a price or a rate changes, it changes on every page at once, and the worked examples are recalculated at every release.</p>
+    <h2>1. Output: PVGIS for every comune</h2>
+    <p>On {dt(REG.source.pvgis_retrieved_at)} we queried the PVcalc API of PVGIS 5.3, the European Commission Joint Research Centre's service, for each of the {n(ITALIA.n_comuni)} comuni in the GeoNames list (ISTAT codes, CC BY 4.0 licence), at the comune's coordinates: 1 kWp of crystalline silicon, {n(P.modello.perdite_pct)}% losses, 30 degrees facing south, SARAH-3 irradiation data from 2005 to 2023, horizon from the terrain model. The population-weighted Italian average is {n(ITALIA.ey)} kWh per kWp; values range from {n(ITALIA.ey_min)} ({ITALIA.min_nome}) to {n(ITALIA.ey_max)} ({ITALIA.max_nome}). Averages for the {n(PROVINCE.length)} provinces and 20 regions are weighted by the comuni's population. Province codes follow GeoNames, which does not yet reflect Sardinia's 2025 reorganisation.</p>
+    <h2>2. Direction and tilt</h2>
+    <p>At six reference points (Milan, Padua, Umbria, Basilicata, central Sicily and central Sardinia) we asked PVGIS for the output at 11 tilts from 10 to 90 degrees and 8 directions, plus the flat case: 89 combinations per point. Each region uses the nearest point. Your output is the comune's value at 30° south times the ratio of your orientation to 30° south, interpolated linearly between grid points.</p>
+    <h2>3. Hour-by-hour self-consumption</h2>
+    <p>For each region we downloaded the PVGIS hourly series for 2019 to 2023 at the regional capital ({cap}) and compared it, hour by hour, with the average hourly withdrawal of resident households metered by ARERA in 2025 by region, month and day type (weekday, Saturday, Sunday and holidays). There are two profiles: contracted power of 1.5 to 3 kW and of 3 to 4.5 kW; the calculator uses the first below {n(P.modello.consumo_soglia_profilo)} kWh a year and the second above. The battery charges from surplus only, with a round-trip efficiency of {pc(P.modello.batteria_rendimento)} and {pc(P.modello.batteria_utile)} usable capacity. The result is a table per region with {REG.p.length} output-to-use ratios and {REG.b.length} battery sizes; the calculator interpolates between them. With output equal to consumption and no battery, the self-used share ranges from {pc(Math.min(...REGIONI.map((r) => r.sc_base[9][0])))} to {pc(Math.max(...REGIONI.map((r) => r.sc_base[9][0])))} depending on the region.</p>
+    <p>The suggested consumption is the 2025 average for resident households in the region with 3 to 4.5 kW (Italy: {n(ITALIA.cons_alto)} kWh; with 1.5 to 3 kW, {n(ITALIA.cons_base)} kWh). It is an average profile: it smooths the peaks of a single home, so a real family's self-consumption can be higher or lower.</p>
+    <h2>4. Value in euros</h2>
+    <ul>
+      <li><strong>Energy used at home</strong>: avoids the energy component, system charges and taxes of ARERA's vulnerable reference customer, averaged over the four 2026 quarters: {P.prezzo_evitato.trimestri.map((t) => `${t.t} ${n(prezzoEvitatoTrim(t), 2)}`).join(' · ')} c€/kWh, on average {n(PREZZO_EVITATO_CT, 2)} c€/kWh. Network and retail charges are left out because they are largely fixed or tied to contracted power.</li>
+      <li><strong>Exported energy</strong>: the GSE's 2026 monthly average ritiro dedicato prices by zone and time band, from January to {RID.ultimo_mese}; weighted by the share of solar output in bands F1 ({pc(w.F1, 1)}), F2 ({pc(w.F2, 1)}) and F3 ({pc(w.F3, 1)}), which we computed from the PVGIS hourly series, and by each month's output; never below the guaranteed minimum price of {n(P.rid.pmg_eur_mwh, 1)} €/MWh. The GSE actually pays the hourly zonal price, so ours is an approximation.</li>
+      <li><strong>GSE fee</strong>: €{n(P.rid.fee_eur_kw[0].eur, 2)} per kW a year up to 20 kW, €{n(P.rid.fee_eur_kw[1].eur, 2)} up to 200 kW, none up to {n(P.rid.fee_esente_fino_kw)} kW.</li>
+      <li><strong>Cost</strong>: without a quote we use €{n(P.costi.fv_eur_kw)} per kW (the maximum reference cost in the energy community decree up to 20 kW, VAT excluded) and €{n(P.costi.accumulo_eur_kwh)} per kWh of battery (the spending cap in Decree-Law 34/2020). These are legal references, not market prices.</li>
+      <li><strong>Tax deduction</strong>: {pc(P.detrazione.aliquota_prima_casa)} or {pc(P.detrazione.aliquota_altri)} of spending up to €{n(P.detrazione.tetto_eur)}, in {P.detrazione.rate} annual instalments.</li>
+      <li><strong>Payback</strong>: benefit and deduction instalment are added year by year until the cost is covered; constant prices and output.</li>
+    </ul>
+    <h2>5. Checks before every release</h2>
+    <ul>
+      <li>Energy balance: self-use plus export equals output in every combination; the self-used share falls with system size and rises with battery size.</li>
+      <li>Deduction, GSE fee and community premium tested against hand-calculated cases.</li>
+      <li>Data: 20 regions, {n(PROVINCE.length)} provinces, {n(ITALIA.n_comuni)} comuni, 7 market zones with the same months.</li>
+    </ul>
+    <h2>What the calculator does not know</h2>
+    <ul>
+      <li>Shade on your roof: trees, chimneys and nearby buildings are not in the terrain model; the shade option is a flat reduction.</li>
+      <li>Panel degradation and future prices: the calculation holds them constant.</li>
+      <li>Your tax position: the deduction only helps if you owe enough income tax each year.</li>
+      <li>Your distributor's connection rules and the cost of any building permits.</li>
+      <li>Ritiro dedicato prices for months not yet published: the GSE updates them from the 22nd of the following month.</li>
+    </ul>
+    <h2>Updates</h2>
+    <p>A script checks the GSE ritiro dedicato prices every month and ARERA prices every quarter, and rebuilds the site when something changes. All texts are fully reviewed at least every {REVIEW_CYCLE_MONTHS} months and whenever the law changes. Please report errors to <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
+    <h2>Sources</h2>
+    <ul>{sources.map((s) => <li><a href={s.url} rel="nofollow noopener" target="_blank">{s.label.en}</a></li>)}</ul>
+  </div>
+  )}
+</PageLayout>

@@ -1,0 +1,1050 @@
+ 
+ 
+  DTF  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+Ritiro Dedicato dell’energia elettrica  
+Conguaglio a Prezzi Minimi Garantiti  
+Tariffa Onnicomprensiva  
+Modalità e condizioni tecnico-operative  
+  
+Disposizioni Tecniche di Funzionamento  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  2 
+DTF 
+  
+Ritiro Dedicato 
+  
+– 
+  
+Conguaglio  
+a  
+PMG 
+  
+– 
+  
+Tariffa Onnicomprensiva 
+  
+  
+  
+  
+  
+  
+Aggiornato 6 novembre 2023  
+Indice  
+  
+1. Premessa ................................................................................................................................................. 5 
+2. Definizioni ................................................................................................................................................ 6 
+3. Registrazione sul portale informatico ................................................................................................... 6 
+4. Istanza di Ritiro Dedicato e Conguaglio PMG-ML ............................................................................... 7 
+4.1. Valutazione dell’istanza RID/PMG-ML e attivazione del contratto ...................................................... 8 
+4.2. Misure e caratteristiche AdM nel punto di immissione ........................................................................ 8 
+4.3. Cessione in rete dell’energia elettrica (impianti di potenza attiva nominale ≤ 20 kW)  ........................ 8 
+5. Gestione del contratto RID/TO/PMG-ML ............................................................................................... 9 
+5.1. Richiesta di conguaglio a Tariffa Onnicomprensiva ............................................................................ 9 
+5.2. Attività di previsione e programmazione .............................................................................................. 9 
+5.2.1. Impianti di potenza attiva nominale minore o uguale a 1 MW alimentati da fonti programmabili 
+e impianti alimentati da fonti non programmabili ...................................................................................... 9 
+5.2.2. Impianti di potenza attiva nominale superiore a 1 MW alimentati da fonti programmabili  .......... 9 
+5.3. Corrispettivi per la cessione in rete dell’energia elettrica .................................................................... 9 
+5.3.1. Prezzi orari zonali ...................................................................................................................... 10 
+5.3.2. Prezzi minimi garantiti ................................................................................................................ 10 
+5.4. Corrispettivo di sbilanciamento .......................................................................................................... 10 
+5.5. Corrispettivo derivante dalla partecipazione ai mercati infragiornalieri ............................................. 11 
+5.6. Corrispettivo a copertura dei costi amministrativi per i servizi resi dal GSE ..................................... 11 
+5.7. Tempistiche di condivisione dei corrispettivi sul portale informatico ................................................. 12 
+5.7.1. Pubblicazione dei corrispettivi per la cessione in rete dell’energia elettrica .............................. 12 
+5.7.2. Pubblicazione dei corrispettivi di sbilanciamento ...................................................................... 12 
+5.8. Contestazione delle partite commerciali ............................................................................................ 12 
+5.8.1. Indisponibilità delle misure ......................................................................................................... 13 
+5.9. Fatturazione (RID/TO) ....................................................................................................................... 13 
+5.9.1. Fatturazione del Produttore verso il GSE .................................................................................. 13 
+5.9.2. Fatturazione del GSE verso il Produttore .................................................................................. 14 
+5.9.3. Emissione di fatture integrative e note di credito ....................................................................... 15 
+5.9.4. Reverse Charge ......................................................................................................................... 15 
+5.10. Pagamento delle fatture ................................................................................................................. 15 
+5.11. Comunicazione indisponibilità per unità di produzione rilevanti alimentate a fonti rinnovabili non 15 
+programmabili ............................................................................................................................................... 15 
+5.12. Comunicazione indisponibilità in “Modalità Completa” .................................................................. 16 
+  
+  3 
+DTF 
+  
+Ritiro Dedicato 
+  
+– 
+  
+Conguaglio  
+a  
+PMG 
+  
+– 
+  
+Tariffa Onnicomprensiva 
+  
+5.13. Acquisizione dati tramite dispositivi di telelettura del GSE (RID/TO) ............................................ 16 
+5.14. Recesso dal contratto di Ritiro Dedicato e di Tariffa Onnicomprensiva ........................................ 17 
+6. Attivazione e gestione del contratto per il Conguaglio a Prezzi Minimi Garantiti  .......................... 17 
+6.1. Attivazione del Contratto Conguaglio PMG-ML ................................................................................. 17 
+6.2. Corrispettivo integrativo per il Conguaglio PMG-ML ......................................................................... 17 
+6.3. Corrispettivo a copertura dei costi amministrativi per i servizi resi dal GSE ..................................... 18 
+6.4. Tempistiche di pubblicazione dei corrispettivi sul portale informatico ............................................... 18 
+6.5. Rinnovo del contratto Conguaglio PMG-ML ...................................................................................... 19 
+7. Modalità di comunicazione tra GSE e Produttore ............................................................................. 19 
+ 
+  
+  
+  4 
+DTF 
+  
+Ritiro Dedicato 
+  
+– 
+  
+Conguaglio  
+a  
+PMG 
+  
+– 
+  
+Tariffa Onnicomprensiva 
+  
+Aggiornamenti  
+La versione delle DTF del 17 giugno 2018 è stata aggiornata per recepire le modifiche effettuate con l'implementazione 
+del processo di semplificazione dell'iter di attivazione dei contratti RID, introdotta dal GSE al fine di agevolare gli 
+Operatori nell’invio delle richieste e velocizzare le tempistiche di attivazione contrattuale.  
+In particolare, l’attuale versione è stata aggiornata per quanto riguarda:  
+ il paragrafo 4 relativo alla presentazione dell’istanza di Ritiro Dedicato, Tariffa Onnicomprensiva o 
+Conguaglio PMG-ML; 
+ il paragrafo 4.1 relativo alla valutazione dell’istanza di RID/TO/PMG e attivazione del relativo Contratto;  
+ il paragrafo 5.14 relativo al recesso dal contratto di Ritiro Dedicato e Tariffa Onnicomprensiva; 
+ il paragrafo 7 relativo alle modalità di comunicazione tra GSE e Produttore.  
+  
+  
+  5 
+DTF 
+  
+Ritiro Dedicato 
+  
+– 
+  
+Conguaglio  
+a  
+PMG 
+  
+– 
+  
+Tariffa Onnicomprensiva 
+  
+1. Premessa  
+La sottoscrizione di un contratto di:  
+ Ritiro Dedicato (RID) o Conguaglio a prezzi minimi garantiti per gli impianti che  operano nel mercato libero  
+    (Conguaglio PMG-ML), stipulata ai sensi dell’Allegato A alla Deliberazione 280/2007;  
+ Tariffa Onnicomprensiva (TO), stipulata ai sensi della Deliberazione ARG/elt  n. 1/2009 
+impegna il Produttore al rispetto delle clausole contrattuali nonché a prendere visione del presente documento redatto 
+dal Gestore dei Servizi Energetici – GSE S.p.A..  
+Il documento è stato predisposto con l’intenzione di mettere a disposizione dei Produtt ori uno strumento sintetico e di 
+facile consultazione in cui siano chiariti, anche con il supporto di schemi e tabelle, gli aspetti tecnici più complessi dell a 
+normativa e sia così agevolata l’attività gestionale richiesta al Produttore nel corso di vigenz a del contratto.  
+La normativa citata nel presente testo (leggi, decreti, deliberazioni AEEGSI), se non diversamente indicato, si intende 
+aggiornata con le eventuali successive modifiche e integrazioni.  
+Sulla base della normativa vigente e delle modalità di attuazione della stessa, le DTF sono soggette ad aggiornamento e 
+attualmente regolano:  
+ le operazioni a carico del Produttore per l’accesso e la registrazione al portale informatico “Area Clienti" del 
+GSE e le operazioni a carico del Produttore per la presentazione dell'istanza di Ritiro Dedicato e Conguaglio 
+PMG-ML (RID: Deliberazione 280/07, Allegato A, art. 3.1 - PMG: Deliberazione 280/07, Allegato A, art. 15, 
+modificata dalla Deliberazione 618/2013/R/EFR);  
+ le attività necessarie per la stipula e la gestione dei contratti per il RID e per la TO (TO: Deliberazione ARG/elt 
+1/09, art. 3.1);  
+ le attività necessarie per la stipula e la gestione del contratto per la richiesta di Conguaglio PMG -ML le 
+tempistiche e le modalità previste per la pubblicazione delle partite commerciali sul portale informatico e 
+per la relativa accettazione da parte del Produttore ai fini della fatturazione;  
+ le tempistiche e le modalità di pagamento delle partite attive e passive connesse al ritiro dell’energia  
+elettrica;  
+ la remunerazione del conguaglio PMG-ML;  
+ le tempistiche e le modalità di trasmissione dei dati richiesti al Produttore dal GSE per il funzionamento dei 
+sistemi previsionali e di programmazione.  
+I produttori che intendono accedere al regime di Ritiro Dedicato possono attivare il servizio tramite il Modello Un ico o 
+con la modalità standard. Il Modello Unico è un iter semplificato per la realizzazione, la connessione e l'esercizio di nuovi 
+impianti fotovoltaici pe r i quali sia richiesto contestualmente l'accesso al servizio di Ritiro Dedicato e può essere 
+utilizzato dai produttori titolari di impianti fotovoltaici con le seguenti caratteristiche:  
+ realizzati ai sensi dell’articolo 7-bis, comma 5, del decreto legislativo 28/11 su edifici o su strutture e manufatti 
+fuori terra diversi dagli edifici, nonché nelle relative pertinenze; 
+ realizzati presso clienti finali già dotati di punti di prelievo attivi in bassa o media tensione;  
+ aventi potenza non superiore a 200 kW; 
+ assenza di ulteriori impianti di produzione sullo stesso punto di prelievo.  
+I produttori interessati dovranno interfacciarsi unicamente con i gestori di rete. Il GSE, dopo aver ricevuto dai gestori di 
+rete i dati presenti nel Modello Unico, provvederà ad a ttivare il contratto e a comunicare all'utente le informazioni per 
+poterne visualizzare tutti i dati accedendo al portale Ritiro Dedicato - RID dell'Area Clienti GSE. Il contratto sarà attivato 
+dalla data di attivazione della connessione, così come comunicata dal gestore di rete. 
+La modalità di accesso standard al Ritiro Dedicato è descritta nel dettaglio al paragrafo 4. 
+  
+  6 
+DTF 
+  
+Ritiro Dedicato 
+  
+– 
+  
+Conguaglio  
+a  
+PMG 
+  
+– 
+  
+Tariffa Onnicomprensiva 
+  
+ 
+2. Definizioni  
+CENSIMP – è un codice che viene rilasciato da Terna in adempimento agli obblighi di natura informativa previsti dalla 
+Deliberazione ARG/elt 205/08 dell’Autorità per l’energia elettrica il gas e il sistema idrico (di seguito AEEGSI), agli 
+impianti che il Produttore è tenuto a censire sul sistema GAUDÍ di Terna all’indirizzo https://mercato.terna.it/Gaudi.  
+Contratto di dispacciamento – Contratto stipulato tra ciascun Utente del dispacciamento e Terna, per l'erogazione del 
+servizio di dispacciamento e per la regolazione delle relative partite economiche. Sono tenuti a stipulare un contratto 
+per il servizio di dispacciamen to i titolari di unità di produzione, i titolari di unità di consumo, ad eccezione delle unità 
+di consumo comprese nel mercato vincolato e l'Acquirente Unico, per le unità di consumo comprese nel mercato 
+vincolato.  
+GAUDÍ – è il sistema di Gestione delle A nagrafiche Uniche Degli Impianti di produzione e delle relative unità, istituito 
+dall’AEEGSI presso Terna con la Deliberazione ARG/elt 124/10; il sistema razionalizza i flussi informativi tra i vari soggetti 
+operanti nel settore della produzione di energia elettrica e raccoglie tutti i dati anagrafici e tecnici degli impianti e delle 
+unità di produzione, rilevanti e non rilevanti.  
+Giorni lavorativi sulla piazza di  Roma – per giorno lavorativo si intende un giorno compreso tra lunedì e venerdì, ad 
+eccezione di quelli riconosciuti festivi dallo Stato a tutti gli effetti civili.  In particolare, si considerano festivi i giorni: 1° 
+gennaio, 6 gennaio, lunedì dopo Pasqua, 25 aprile (Anniversario della Liberazione), 1° maggio (Festa del lavoro), 2 giugno 
+(Fondazione della Repubblica), 29 giugno (SS. Pietro e Paolo), 15 agosto, 1° novembre, 8 dicembre, 25 dicembre, 26 
+dicembre.  
+Istanza – domanda che il Produttore presenta attraverso l’apposito portale web per richiedere l’accesso al regime di 
+Ritiro Dedicato dell'energia elettrica, di Tariffa Onnicomprensiva o il Conguaglio a ML-PMG.  
+Mese “n” – generico mese di competenza per il ritiro di energia elettrica. L'espressione “n+1”, “n+2”, ecc. indica il primo, 
+il secondo o l'ulteriore mese successivo a quello “n” di riferimento.  
+Misura dell'energia elettrica – grandezza elettrica rilevata da un misuratore in un punto di immissione, in un punto di 
+prelievo o in un punto di interconnessione.  
+Numero istanza  – codice che il GSE assegna univocamente ad ogni istanza. Il Produttore è tenuto a riportare tale 
+identificativo in ogni corrispondenza indirizzata al GSE.  
+Esempio: RID000001 (per RID); TO000001 (per TO); PMG00001 (per Conguaglio a ML -PMG)  
+Partite economiche valorizzate – valorizzazione della misura dell'energia elettrica rilevata in un determinato mese di 
+competenza alle condizioni economiche disposte dalle Deliberazioni di riferimento.  
+Portale informatico – interfaccia informatica utilizzata dal GSE e dal Produttore per la gestione dei rapporti contrattuali 
+ed economici intercorrenti tra le Parti.  
+Posizione finanziaria netta  – saldo di tutte le posizioni debitorie e creditorie riferite a un dato periodo temporale 
+(corrispondente genericamente al mese) e relative al contratto in essere tra il GSE e il Produttore.  
+Produttore – soggetto, persona fisica o persona giuridica, che sia titolare o abbia la disponibilità di un impianto ammesso 
+al regime di Ritiro Dedicato, al Conguaglio ML-PMG o alla Tariffa Onnicomprensiva.  
+SAPR – codice identificativo relativo al punto di immissione dell’energia elettrica.  Tale codice è omogeneo sul territorio 
+nazionale ed è definito da Terna.  
+UP – Unità di produzione costituita da uno o più gruppi di generazione.  
+3. Registrazione sul portale informatico  
+Il soggetto che intende chiedere:  
+ il Ritiro Dedicato dell'energia elettrica;  
+ l’accesso alla Tariffa Onnicomprensiva;  
+  
+  7 
+DTF 
+  
+Ritiro Dedicato 
+  
+– 
+  
+Conguaglio  
+a  
+PMG 
+  
+– 
+  
+Tariffa Onnicomprensiva 
+  
+ il Conguaglio a PMG dell’energia ceduta al mercato libero, deve preliminarmente seguire la procedura 
+guidata di registrazione per l'inserimento dei propri dati anagrafici e di contatto sui quali intende 
+ricevere le successive comunicazioni.  
+Il completamento del processo di registrazione avviene con il rilascio di userID e password personali per l'accesso all a 
+propria pagina personale.  
+4. Istanza di Ritiro Dedicato e Conguaglio PMG-ML  
+L’istanza di accesso ai regimi commerciali gestiti dal GSE  tramite la modalità standard (no Modello Unico)  deve essere 
+inviata tempestivamente tramite l’apposito portale informati co. Per poter procedere con l’inserimento dell’istanza, 
+l’impianto deve essere inserito in GAUDÍ nello stato “in esercizio”. Ai fini  della definizione  della decorrenza del ritiro 
+dell’energia immessa, il GSE acquisisce, grazie all’interoperabilità dei sist emi, la data di entrata in esercizio 
+dell’impianto/UP inserita e validata dal Gestore di Rete in GAUDÍ (“Data attivazione connessione”); tale data non può 
+essere modificata autonomamente dal GSE.  
+In particolare, il contratto di Ritiro Dedicato decorrerà dalla prima data utile allorché: 
+• siano completate le procedure necessarie all’inserimento dell’impianto o della unità di produzione nel 
+contratto di dispacciamento in immissione del GSE, ovvero dalla data di entrata in esercizio dell’impianto nel 
+caso in cui l’istanza venga presentata e ntro 60 giorni dalla suddetta data di esercizio , come previsto dal 
+combinato disposto degli articoli 3 comma 5 e 14 della deliberazione ARERA arg/elt 280/07;  
+• siano stati risolti eventuali altri contratti GSE alternativi al servizio di Ritiro Dedicato sull’impianto ovvero 
+sull’unità di produzione oggetto del contratto. 
+Di seguito si riporta l’elenco dei principali dati e informazioni necessarie al momento dell’invio dell’istanza per la corretta 
+compilazione dei moduli presenti sul portale a disposizione del Produttore:  
+ informazioni relative all’impianto ovvero all’unità di produzione [codice Censimp e codice Richiesta di GAUDÍ, 
+N.B le funzionalità del portale RI D prevedono il popolamento in automatico di parte dei dati dell’impianto, 
+richiamandoli direttamente dal portale GAUDÍ di Terna , pertanto la correzione di eventuali errori deve essere 
+richiesta tramite il “Call center” di Terna]; 
+ regime di prezzo prescelto dal Produttore [es. prezzo orario (di seguito PO) di cui all’articolo 6 o prezzo minimo 
+garantito (di seguito PMG) di cui all’articolo 7 della deliberazione n. 280/07 ];  
+ regime fiscale;  
+ IBAN per accrediti bancari;  
+ i riferimenti per scambio informazioni con il GSE [e-mail, indirizzo, telefono].  
+Al primo salvataggio della scheda “Dati impianto” il sistema genera un numero istanza RIDXXXXXX o PMGXXXXXX.  
+Al termine della compilazione di tutti i campi obbli gatori richiesti dal portale, il Produttore  deve scaricare e stampare 
+l’istanza per l’accesso ai regimi commerciali gestiti dal GSE, generata automaticamente dal sistema e redatta ai sensi 
+dell’articolo 47 del D.P.R. n. 445/2000. 
+A seguito dell’introduzione della semplificazione dell’iter di accesso al regime di Ritiro Dedicato, la relativa istanza è stata 
+aggiornata inserendo al suo interno l’espressa dichiarazione di presa visione e di accetta zione, ai sensi e per gli effetti 
+degli artt. 1341 e 1342 c.c.,  di tutte le clausole e condizioni del Cont ratto di Ritiro Dedicato, il cui modello è disponibile 
+sul sito GSE. 
+Il produttore , una v olta verificata la correttezza, la completezza dei dati e delle informazioni inserite, è tenuto a 
+sottoscrivere l’istanza e a procedere all’invio  della medesima in formato digitale nel portale  e alla copia del documento 
+di identità del Produttore  o del Legale R appresentante. Per i soli impianti idroelettrici è richiest a anche la trasmissione 
+del Disciplinare di concessione di derivazione delle acque per usi idroelettrici.  
+Le istanze create e non inviate entro 60 giorni verranno automaticamente eliminate dal sistema. 
+Si sottolinea che non sono considerate ammissibili richieste difformi dal format generato automaticamente dal sistema 
+o riportanti modifiche o correzioni. 
+  
+  8 
+DTF 
+  
+Ritiro Dedicato 
+  
+– 
+  
+Conguaglio  
+a  
+PMG 
+  
+– 
+  
+Tariffa Onnicomprensiva 
+  
+Nota: le istruzioni tecniche per l’accesso e la compilazione dei dati richiesti per l’autenticazione e gestione delle proprie 
+posizioni sul portale informatico sono dettagliatamente riportate sul “Manuale utente” scaricabile da 
+http://www.gse.it/ nella sezione riferita al Ritiro Dedicato.  
+4.1. Valutazione dell’istanza RID/PMG-ML e attivazione del contratto 
+A seguito dell’invio dell’istanza di accesso , il GSE procede a verificare la conformità delle dichiarazioni e de lla 
+documentazione inviata dal P roduttore rispetto a  quanto previsto dalla normativa di riferimento  del regime 
+commerciale prescelto. 
+In caso di difformità, carenza di documenti e informazioni il GSE procede a inviare comunicazione, da una casella di posta 
+elettronica dedicata o dal portale applicativo attraverso il quale è gestito il regime commerciale, indicando al produttore 
+la documentazione mancante/incompleta/non conforme e che lo stesso avrà 60 giorni dall’invio della suddetta richiesta 
+per risolvere la carenza documentale . Decorso il sudde tto termine massimo, il GSE valuta la richiesta con la 
+documentazione in proprio possesso. 
+A seguito della verifica positiva dell’istanza, il GSE comunic a al Produttore a mezzo e-mail l’avvenuta attivazione del 
+Contratto. A partire da tale momento, copia del contratto viene resa disponibile sul portale web, ove il Produttore sarà 
+abilitato a stampare la propria copia, firmata digitalmente dal Legale Rappresentante  del GSE e completa dei dati 
+specifici (intestatario del contratto, dati caratteristici dell’impianto ovvero dell’unità di produzione e decorrenza).  
+Per le sole istanze di conguaglio a PMG-ML e TO, ai fini del perfezionamento del contratto, il Produttore deve stampare 
+la dichiarazione di accettazione, sottoscriverne una copia e caricarla sul portale unitamente al documento di identità del 
+Produttore o L egale Rappresentante. Il GSE verifica la congruenza dei dati riportati sulla dichiarazione di accettazione 
+delle clausole contrattuali nonché l’assenza di cancellature e/o aggiunte da parte del Produttore. In seguito alla verifica 
+positiva il GSE provvede ad attivare il contratto PMG-ML/TO e rende disponibile sul portale web una copia dello stesso 
+sottoscritto digitalmente dal Legale R appresentante del GSE. Qualora vengano riscontrate delle difformit à tra la 
+documentazione fornita dal Produttore e quella prodotta automaticamente dal portale web, il GSE accerta i motivi delle 
+differenze e interviene per le eventuali correzioni. 
+4.2. Misure e caratteristiche AdM nel punto di immissione  
+Le misure dell’energi a elettrica immessa vengono rilevate dal Gestore di Rete (responsabile della misura) attraverso 
+apparecchiature di misura (AdM) sulla base del Codice identificativo della misura (SAPR) e del codice identificativo del 
+punto di immissione (POD).  
+Oltre a tali codici, il Produttore deve inserire nella maschera “Dati Impianto”:  
+ Matricola contatore – indica la matricola del contatore così come eventualmente riportata sull’involucro 
+del contatore e/o riportata tra i dati di targa del medesimo. Può essere relativa sia al contatore nella 
+responsabilità del Produttore sia al contatore nella responsabilità del Gestore di Rete.  
+ Codice presa – Il codice presa è un codice alfanumerico con cui ogni Gestore di Rete comp etente individua 
+univocamente i punti di fornitura serviti dalla propria rete distributiva e talvolta può differire dal codice 
+POD e sostituirlo nell’identificare il punto di consegna dell’energia elettrica alla rete.  
+4.3. Cessione in rete dell’energia elettrica (impianti di potenza attiva nominale ≤ 20 kW)  
+Nel caso in cui l’impianto sia posto al servizio dell’abitazione o sede dell'utente, nella maschera “Dati Impianto ” il 
+Produttore deve inserire negli appositi campi il regime di cessione “Parziale”: 
+ Matricola contatore produzione; 
+ Matricola contatore di scambio.  
+Nel caso in cui l’impianto non sia posto al servizio dell’abitazione o sede dell’utente, ovvero l’energia prodotta coincida 
+con quella immessa in rete, il Produttore deve indicare il regime di cessione “Totale”.  
+Nota: ai sensi della circolare 46/E del 2007 dell’Agenzia dell’Entrate, l’energia prodotta e immessa in rete dagli impianti 
+di potenza superiore ai 20 kW e/o in regime di cessione totale è considerata ceduta alla rete nell’ambito di un’attività 
+  
+  9 
+DTF 
+  
+Ritiro Dedicato 
+  
+– 
+  
+Conguaglio  
+a  
+PMG 
+  
+– 
+  
+Tariffa Onnicomprensiva 
+  
+commerciale. Di conseguenza, i corrispettivi derivanti dall’energia ceduta al GSE sono rilevanti sia ai fini dell’imposta sul 
+valore aggiunto, sia ai fini delle imposte dirette, pertanto il Produttore deve essere in possesso di una partita IVA.  
+ 
+5. Gestione del contratto RID/TO/PMG-ML  
+5.1. Richiesta di conguaglio a Tariffa Onnicomprensiva  
+I Produttori che hanno già un contratto  di Ritiro Dedicato possono richiedere la Tariffa Onnicomprensiva [a valle 
+dell’esito positivo della procedura di qualifica di impianto alimentato da fonti rinnovabili (qualifica IAFR)] utilizzando il 
+modulo “Richiesta di conguaglio a Tariffa Onnicomprensiva ” presente nella sezione “Invio Documenti” del portale RID. 
+Il modulo va compilato in tutte le sue parti, sottoscritto e c aricato nell’apposita sezione “ Documento di Richiesta 
+Conguaglio a Tariffa Onnicomprensiva” corredato degli allegati richiesti:   
+ Dichiarazione sostitutiva di atto notorio in cui si conferma di non incorrere nel divieto di cumulo degli 
+incentivi di cui all’articolo 6, comma 1, del DM del 18/12/2008;  
+ Dichiarazione sostitutiva di atto notorio attestante che la produzione di energia elettrica da fonte fossile 
+sia non superiore al 5% della produzione totale;  
+ Fotografia/e della targa del generatore/i (ad esclusione degli impianti idroelettrici);  
+ Documento di Identità del Rappresentante Legale.  
+Solo le richieste pervenute mediante l’applicazione informatica consentono al GSE di riconoscere il conguaglio a Tariffa 
+Onnicomprensiva.  
+5.2. Attività di previsione e programmazione  
+Il Contratto  RID/TO individua gli obblighi del Produttore in relazione a quanto disposto della Deliberazione 
+281/2012/R/efr al fine di permettere al GSE di procedere alla previsione e alla programmazione dell’energia elettrica 
+immessa secondo modalità definite dal GSE e pubblicate sulle “Regole Tecniche”.  
+In particolare si fa riferimento a due tipologie di impianti:  
+1. di potenza attiva nominale minore o uguale a 1 MW alimentati da fonti programmabili o alimentati da fonti 
+non programmabili;  
+2. di potenza attiva nominale superiore a 1 MW alimentati da fonti programmabili.  
+5.2.1. Impianti di potenza attiva nominale minore o uguale a 1 MW alimentati da fonti programmabili e impianti 
+alimentati da fonti non programmabili  
+Il GSE, ai sensi di quanto previ sto dalla Deliberazione 281/2012/R/efr e della Deliberazione 493/2012/R/efr, svolge le 
+attività di previsione e programmazione della produzione degli impianti alimentati da fonti rinnovabili inseriti nel proprio 
+contratto di dispacciamento.   
+5.2.2. Impianti di potenza attiva nominale superiore a 1 MW alimentati da fonti programmabili  
+I titolari di tali impianti sono tenuti a trasmettere il proprio programma di immissioni al GSE tramite apposita sezione 
+del portale informatico con la possibilità di modificarlo en tro le ore 10.15 del giorno antecedente a quello cui il 
+programma è riferito.  
+Nel caso in cui tale programma non venga inviato, il GSE, al fine del calcolo del corrispettivo di sbilanciamento, assume 
+un programma di immissione pari a zero.  
+5.3. Corrispettivi per la cessione in rete dell’energia elettrica  
+Per ciò che riguarda i corrispettivi relativi all’energia elettrica immessa in rete, nella comunicazione dei dati commerciali 
+tramite l’applicazione RID, l’utente dovrà scegliere il regime di prezzi a cui acc edere, selezionando una tra le voci:  
+ prezzo orario (art. 6 Deliberazione 280/07);  
+ prezzo minimo garantito (art. 7 Deliberazione 280/07).  
+  
+  10 
+DTF 
+  
+Ritiro Dedicato 
+  
+– 
+  
+Conguaglio  
+a  
+PMG 
+  
+– 
+  
+Tariffa Onnicomprensiva 
+  
+Una volta confermata la scelta, l’utente ha la possibilità di richiedere il passaggio da una tipologia di prezzo all’altra una 
+sola volta nel corso di un anno solare. Ciò deve avvenire da parte del Produttore mediante l’apertura di una segnalazione 
+sul portale di supporto del GSE, allegando il Modulo di richiesta variazione prezzi di cessione energia RID (disponibile 
+qui) correttamente compilato e corredato dal documento d’identità del legale rappresentante in corso di validità. La 
+variazione avrà decorrenza dal primo giorno di validità dell’istanza nell’anno s olare specificato nel modulo di richiesta. 
+5.3.1. Prezzi orari zonali  
+Il GSE riconosce ai Produttori in regime di Ritiro Dedicato o di Tariffa Onnicomprensiva i prezzi orari zonali di cui all’art . 
+6 della Deliberazione 280/07, sulla base delle misure rilevate dal Gestore di Rete e da questi trasmesse al GSE.  
+5.3.2. Prezzi minimi garantiti  
+I titolari di unità di produzione alimentate da fonti rinnovabili di potenza minore o uguale a 1 MW che non accedono a 
+incentivazioni a carico delle tariffe elettriche ed i titolari di unità di produzione fotovoltaiche di potenza attiva nominale 
+fino a 100 kW e di produzione idroelettriche di potenza elettrica (efficiente) fino a 500kW che accedono a incentivazioni 
+a carico delle tariffe elettriche, nei limiti delle quantità di energi a elettrica immessa in rete indicate dalla tabella 1 
+dell’Allegato A alla Deliberazione 280/07, possono richiedere che siano applicati i prezzi minimi garantiti (PMG), in 
+alternativa ai prezzi orari (PO).  
+I prezzi minimi garantiti (PMG) sono differenziati  per fonte e per scaglioni progressivi di produzione e sono riferiti 
+all’anno solare.  
+L’applicazione dei prezzi minimi garantiti, di cui al comma 7.1 dell’Allegato A alla deliberazione 280/07 come modificato 
+dalla deliberazione 179/2014/R/EFR per impianti  idroelettrici che accedono a strumenti incentivanti sull’energia 
+elettrica prodotta, potrà essere riconosciuta da parte del GSE previa acquisizione della dichiarazione sostitutiva di atto 
+notorio ai sensi del D.P.R. 445/2000 inerente il rispetto del vincolo di potenza elettrica non superiore a 500 kW. Acquisita 
+tale documentazione, il GSE riconoscerà i prezzi minimi garantiti a partire dal primo giorno dell’anno di acquisizione del 
+documento o, comunque, dal primo giorno di validità del contratto nel medes imo anno.  
+In base a quanto previsto all’Allegato A della Deliberazione 280/07 come modificato dalla Deliberazione 179/2014/R/efr, 
+per gli impianti idroelettrici che accedono a strumenti incentivanti sull’energia elettrica prodotta a carico delle tariffe 
+elettriche e che beneficiano dei prezzi minimi garantiti, per i quali i produttori, in sede di istanza, hanno comunicato una 
+potenza elettrica fino a 500 kW e una potenza attiva nominale superiore a 500 kW, il GSE verifica mensilmente, sulla 
+base dei dati di misura inviati dal Gestore di Rete, che la suddetta soglia non sia superata per 4 ore consecutive.  
+In caso si verifichi tale condizione, il GSE blocca la validazione della misura inviando contestualmente una comunicazione 
+via mail al Gestore di Rete e in copia il Produttore, richiedendo una verifica del dato di misura trasmesso.  
+Nel caso in cui il Gestore confermi la prima versione di misura il GSE provvede alla modifica del prezzo di remunerazione 
+dell’energia immessa da PMG a PO e procede al calcolo d ei conseguenti conguagli che interesseranno tutti i mesi del 
+medesimo anno solare.  
+L’eventuale conguaglio a PMG che dovesse rendersi necessario a seguito della rettifica dell’esito del suddetto controllo 
+dovuta all’invio da parte del Gestore di Rete di un a nuova versione della misura, sarà effettuato entro il giorno 15 del 
+mese di marzo dell’anno successivo a quello di competenza.   
+Si evidenzia che, nel caso in cui il contratto non abbia validità per l’intero anno, gli scaglioni relativi ai prezzi minimi 
+garantiti (PMG) sono riproporzionati sulla base dei giorni utili di funzionamento dell’impianto.  
+I PMG vengono aggiornati annualmente applicando il tasso di variazione annuale dei prezzi al consumo per le famiglie 
+di operai e impiegati rilevato dall’Istat, con arrotondamento alla prima cifra decimale secondo il criterio commerciale ai 
+valori esposti nella tabella 1 dell’Allegato A della Deliberazione 280/07, ai valori in vigore nell’anno solare precedente, 
+fino a successive ridefinizioni sulla base dell’analisi dei costi di gestione e dei combustibili.  
+5.4. Corrispettivo di sbilanciamento  
+L’articolo 8 dell’Allegato A alla deliberazione 280/07, come modificato dalla deliberazione 522/2012/R/efr, prevede che 
+il GSE calcoli, per ciascun periodo rilevante del mese  di competenza e per ciascun punto di dispacciamento, la quota 
+residua dei corrispettivi orari di sbilanciamento attribuiti da Terna al medesimo GSE.  
+  
+  11 
+DTF 
+  
+Ritiro Dedicato 
+  
+– 
+  
+Conguaglio  
+a  
+PMG 
+  
+– 
+  
+Tariffa Onnicomprensiva 
+  
+Tale quota residua è trasferita per ciascuna unità di produzione secondo le modalità previste dal documen to “Regole 
+Tecniche per il trasferimento delle partite economiche relative ai corrispettivi di sbilanciamento e alle offerte accettate 
+sul mercato infragiornaliero” (di seguito: Regole Tecniche) pubblicate sul sito del GSE entro il giorno venti del secondo  
+mese successivo a quello di competenza.   
+Le modalità di attribuzione sono comuni sia al Ritiro Dedicato, sia alla Tariffa Fissa Onnicomprensiva.  
+Nello specifico, per le unità di produzione di qualsiasi potenza la quota residua del corrispettivo di sbilanciamento è 
+calcolata considerando la differenza tra:  
+ il corrispettivo di sbilanciamento, espresso in Euro, attribuito da Terna al punto di 
+dispacciamento;   
+ il prodotto tra:  
+o il prezzo di vendita che si forma nella zona in cui ricade il punto di dispacciamento in esito al mercato 
+del giorno prima (MGP);  
+o lo sbilanciamento fisico effettivo attribuito dal GSE al punto di dispacciamento sulla base della 
+differenza tra l’effettiva immissione e il programma finale di immissione accettato in esito ai mercati 
+del GME.  
+Si evidenzia che per effetto delle differenti tempistiche nel calcolo dei diversi corrispettivi, le misure dell’energia elettrica 
+utilizzate per il calcolo degli sbilanciamenti, pur riferendosi allo stesso mese di competenza, potranno risultare differenti 
+da quelle utilizzate nel calcolo del corrispettivo di cessione.  
+Tuttavia tenderanno ad essere uguali al termine delle sessioni di conguaglio, così come previsto dal Testo Integrato del 
+Settlement (ARG/elt 107/09).  
+5.5. Corrispettivo derivante dalla partecipazione ai mercati infragiornalieri  
+I controvalori derivanti dalla partecipazione ai mercati infragiornalieri sono trasferiti per ciascuna unità di produzione 
+secondo quanto previsto dall’articolo 9 dell’Allegato A alla deliberazione n. 280/07 come modificato dalla deliberazione 
+493/2012/R/efr, secondo l e modalità previste dalle Regole Tecniche e differenziate in base alla tipologia di unità di 
+produzione.   
+Le modalità di attribuzione sono comuni sia al Ritiro Dedicato, sia alla Tariffa Fissa Onnicomprensiva.  
+Nello specifico, per le unità di produzione di qualsiasi potenza, i maggiori ricavi o oneri derivanti dalla partecipazione ai 
+mercati infragiornalieri sono calcolati considerando il prodotto tra:  
+  le quantità accettate sui mercati infragiornalieri nel periodo rilevante per punto di dispacciamento; 
+  
+ la differenza tra:  
+o il prezzo di vendita che si forma nella zona in cui ricade il punto di dispacciamento in esito al mercato 
+del giorno prima (MGP);  
+o il prezzo di vendita/acquisto in esito alla sessio ne dei mercati infragiornalieri che si forma nella zona 
+in cui ricade il punto di dispacciamento.  
+5.6. Corrispettivo a copertura dei costi amministrativi per i servizi resi dal GSE  
+A partire dal 1° gennaio 2015, i Produttori che accedono, per almeno un giorno  nell’anno di riferimento, al regime di 
+Ritiro Dedicato, ad esclusione dei Produttori che hanno impianti di potenza nominale fino a 3 kW, sono tenuti a 
+corrispondere al GSE una tariffa a copertura degli oneri di gestione, verifica e controllo (DM 24/12/201 4).  
+Tutte le informazioni sono disponibili nel documento Modalità operative per il riconoscimento dei costi sostenuti dal 
+GSE.  
+Per i produttori aderenti al regime di Tariffa Onnicomprensiva, fermo restando quanto previsto per l’energia elettrica 
+incentivata ai sensi del DM 6 luglio 2012, per la quota parte di energia non incentivata, il corrispettivo a copertura 
+deicosti amministrativi è pari a 0,05 c€/kWh, ai sensi di quanto previsto dall’art.4.1 lettera b3) della Deliberazione 
+ARG/elt 1/09 come modifica dalla Deliberazione 493/201/R/efr.  
+  
+  12 
+DTF 
+  
+Ritiro Dedicato 
+  
+– 
+  
+Conguaglio  
+a  
+PMG 
+  
+– 
+  
+Tariffa Onnicomprensiva 
+  
+5.7. Tempistiche di condivisione dei corrispettivi sul portale informatico  
+Le tempistiche di pubblicazione dei corrispettivi sul portale informatico, di seguito riportate, sono comuni sia al Ritiro 
+Dedicato, sia alla Tariffa Onnicomprensiva.  
+5.7.1. Pubblicazione dei corrispettivi per la cessione in rete dell’energia elettrica  
+A partire dal primo giorno del mese successivo (n+1) al mese (n) di competenza del ritiro di energia elettrica, non appena 
+i gestori di rete rendono disponi bili le misure, e comunque entro il giorno 25 del mese n+1, il GSE, previa verifica di 
+coerenza dei dati ricevuti dai gestori di rete rispetto ai dati caratteristici dell’impianto, pubblica sul portale informatic o 
+le partite commerciali valorizzate al prezzo di riferimento (“Corrispettivo”).  
+Nel caso in cui il controllo descritto abbia esito positivo, il Produttore riceve tramite e -mail la conferma dell’avvenuta 
+pubblicazione dei corrispettivi sul portale informatico.  
+Nel caso di mancata comunicazione delle misure da parte del Gestore di Rete (articolo 13, comma 1 della Deliberazione 
+280/07), il GSE procede ad inviare un sollecito mediante e-mail al soggetto responsabile della rilevazione e registrazione 
+delle misure.  
+Il Produttore ha la possibilità di vi sionare il Corrispettivo pubblicato nell’apposita sezione “Corrispettivi > Storico 
+Corrispettivi”, nella quale è disponibile anche il dettaglio di tutti i corrispettivi, attivi e passivi, calcolati per la par tita 
+commerciale pubblicata.  
+Una volta resi disponibili da parte del GSE i corrispettivi mensili, il Produttore, nell’apposita sezione del portale “Fatture 
+e Pagamenti > Gestione”, può procedere alla compilazione della fattura in formato elettronico, che resterà disponibile 
+per la stampa.  
+5.7.2. Pubblicazione dei corrispettivi di sbilanciamento  
+Entro il giorno 20 del secondo mese successivo (n+2) al mese (n) di competenza del ritiro di energia elettrica, il GSE 
+pubblica sul portale informatico il corrispettivo di sbilanciamento e il controvalore derivante dalla partecipazione ai 
+mercati infragiornalieri imputabili a ciascuna unità di produzione.  
+5.8. Contestazione delle partite commerciali  
+Il Produttore che intende comunicare al GSE una difformità nella rilevazione delle misure dell’energia elettrica immessa 
+in rete o nell’attribuzione dei prezzi deve fare riferimento esclusivamente al Contact Center, contattandolo attraverso i 
+sotto indicati canali:  
+ apertura di una segnalazione tramite il portale di supporto del GSE; 
+ al numero verde 800.16.16.16.  
+Il Produttore deve indicare sempre, nelle proprie comunicazioni, il numero del contratto (es.: RID0001..; TO0001..), il 
+mese di competenza relativo alla contestazione e ogni altro elemento (SAPR,  UP, CENSIMP) utile ad agevolare 
+l’identificazione dell’impianto, nonché  le ragioni che hanno comportato la “contestazione” della partita commerciale 
+pubblicata.  
+Nello specifico il Produttore per contestazioni relative alle misure dovrà fornire le seguenti informazioni:  
+ Codice Impianto; 
+ Numero istanza RID/TO;  
+ Ragione Sociale/SR;  
+ Ragione Sociale Gestore di Rete;  
+ Regione di ubicazione dell’impianto;  
+ Anno e mese della misura contestata;  
+ Energia netta (misura contestata);  
+ Energia riscontrata dal SR.  
+Per la contestazione dei prezzi:  
+ Codice impianto(SAPR, UP e Censimp);  
+  
+  13 
+DTF 
+  
+Ritiro Dedicato 
+  
+– 
+  
+Conguaglio  
+a  
+PMG 
+  
+– 
+  
+Tariffa Onnicomprensiva 
+  
+ Numero istanza RID/TO;  
+ Ragione Sociale/SR (possibilmente Partita IVA o codice fiscale);  
+ Data di pubblicazione e ammontare dell’importo contestato;  
+ Regione di ubicazione dell’impianto;  
+ Anno, mese, giorno e ora oggetto della contestazione.  
+Per la contestazione del coefficiente di perdita:  
+ Codice impianto(SAPR e Censimp);  
+ Codice istanza RID/TO;  
+ Ragione Sociale/SR (possibilmente Partita IVA o codice fiscale);  
+ Motivazioni sull’indicazione sull’istanza di un livello di tensione differente da q uello che asserisce di avere.  
+Il GSE prende in carico la contestazione e valuta le azioni da intraprendere per la risoluzione della stessa in base alle 
+motivazioni addotte dal Produttore.  
+Qualora la contestazione sia valutata legittima, il GSE procederà con la pubblicazione di un ulteriore corrispettivo a 
+rettifica del precedente.  
+Si sottolinea che, nel caso in cui il Produttore contesti la misura valorizzata nella partita commerciale, il GSE non può 
+procedere al ricalcolo dei corrispettivi in mancanza di un riscontro in merito da parte del Gestore di Rete. E’ opportuno 
+quindi che anche il Produttore si attivi presso il Gestore di Rete per sollecitare le verifiche di competenza.  
+5.8.1. Indisponibilità delle misure  
+Nel caso di indisponibilità delle misure effettive, il GSE procede a sollecitare il distributore affinché comunichi i dati di  
+misura e contestualmente tiene aggiornato il Produttore sullo stato dei valori mancanti.  
+5.9. Fatturazione (RID/TO)  
+Le tempistiche di fatturazione, di seguito riportate, sono comuni sia al Ritiro Dedicato, sia alla Tariffa Onnicomprensiva.  
+5.9.1. Fatturazione del Produttore verso il GSE  
+I rapporti creditori del Produttore (fattura attiva del Produttore verso il GSE) sono generati da:  
+ corrispettivi relativi alla cessione dell’energia di cui al § 5.4;  
+ qualora positivi, i corrispettivi di sbilanciamento di cui al § 5.55;  
+ qualora positivi, i corrispettivi derivanti dalla partecipazione ai mercati infragiornalieri di cui al §5.66; 
+I sopra elencati casi generano una fatturazione dall'operatore elettrico verso il GSE.  
+Il GSE pubblica una proposta di fattura con le seguenti informazioni:  
+1. dati anagrafici del Produttore;  
+2. dati anagrafici del GSE;  
+3. importi totali oggetto di fatturazione ripartiti per tipologia di corrispettivo per i quali, in caso di più contratti 
+stipulati con GSE, l’ Operatore potrà visualizzare gli elementi riferiti ad ogni singolo  impianto/UP 
+contrattualizzato;  
+4. l’ammontare totale fattura;  
+5. altri elementi obbligatori caratterizzanti la fattura (iscrizione registro CCIAA, ecc .).  
+Il Produttore deve trasformare tale documento in una sua fattura attiva entro l’ultimo giorno calendariale del mese n+1 
+per il corrispett ivo di cessione. Per i corrispettivi di sbilanciamento e i corrispettivi derivanti dalla partecipazione ai 
+  
+  14 
+DTF 
+  
+Ritiro Dedicato 
+  
+– 
+  
+Conguaglio  
+a  
+PMG 
+  
+– 
+  
+Tariffa Onnicomprensiva 
+  
+mercati infragiornalieri, qualora positivi, la compilazione della fattura dovrà avvenire entro l’ultimo giorno calendariale 
+del mese n+2.  
+Il processo di fatturazione è articolato nelle seguenti fasi:  
+1. il Produttore deve completare la proposta di fattura presente sul portale informatico inserendo il “numero” 
+e la “data” da attribuire al documento.  
+Le fatture emesse verso la Pubblica Amministrazione de vono essere caratterizzate da una numerazione 
+progressiva separata rispetto a quella utilizzata per le fatture cartacee. Il numero attribuito, inoltre, deve 
+essere univoco: in caso contrario il documento sarà scartato dal Sistema di Interscambio;  
+2. a seguito del completamento della proposta di fattura, il produttore deve:  
+ confermare la correttezza del numero e della data inseriti in fattura che non potranno più essere 
+modificati;  
+ autorizzare il GSE a trasmettere la fattura, secondo il tracciato e le modali tà previsti dalla normativa di 
+riferimento sulla fatturazione elettronica della Pubblica Amministrazione;  
+ accettare le modalità di erogazione del corrispettivo che prevedono il pagamento solo a seguito della 
+compilazione completa della fattura;  
+3. dopo la conferma del Produttore, il GSE firma digitalmente e trasmette la fattura al Sistema di Interscambio 
+per conto del Produttore stesso;  
+4. il Produttore riceve all’indirizzo di posta elettronica indicato nel portale informatico una e -mail di notifica 
+relativa all’esito dell’invio della fattura al Sistema di Interscambio;  
+5. in caso di notifica di accettazione, il Produttore, collegandosi alla sezione di fatturazione del portale 
+informatico, accede al “fascicolo elettronico” e scarica il file della notific a di accettazione del Sistema di 
+Interscambio e il file della fattura elettronica.  
+Il Produttore è tenuto a conservare, ai sensi delle disposizioni normative vigenti, la documentazione messa 
+a disposizione dal GSE all’interno del “fascicolo elettronico”;  
+6. in caso di “notifica di scarto” da parte del Sistema di Interscambio, la cui motivazione è riportata nella colonna 
+“Motivo scarto” della sezione di fatturazione del portale informatico, la fattura sarà considerata “non 
+emessa”. Il GSE, a seguito della rettifica dei dati da parte del Produttore, pubblicherà una nuova proposta di 
+fattura.  
+ATTENZIONE: è importante che l’operatore verifichi i dati di fatturazione inseriti sul Portale web (numero fattura e data 
+fattura) prima di procedere alla conferma e invio , in quanto successivamente non potranno più essere modificati, 
+inoltre, per la scelta del Regime Fiscale, la responsabilità esclusiva in merito alla veridicità, esattezza e completezza di 
+quanto dichiarato è del soggetto dichiarante  
+ATTENZIONE: le fattur e emesse con modalità differenti da quelle proposte sul portale informatico, non saranno 
+accettate dal GSE.  
+5.9.2. Fatturazione del GSE verso il Produttore  
+I rapporti creditori del GSE verso il Produttore (debito del Produttore) sono generati da:  
+ corrispettivo a copertura dei costi amministrativi per i servizi resi dal GSE di cui al § 5.7;  
+ qualora negativi, i corrispettivi di sbilanciamento di cui al § 5.55;  
+ qualora negativi, i corrispettivi derivanti dalla partecipazione ai mercati infragiornalieri di cui al § 5.66; 
+I sopra elencati casi generano una fatturazione del GSE verso l’ettrico.  
+La fattura per il corrispettivo a copertura dei costi amministrativi per i servizi resi dal GSE sarà emessa dal GSE 
+unitamente al primo corrispettivo mensile pe r l’anno di riferimento; mentre, le fatture mensili dei corrispettivi di 
+sbilanciamento e dei corrispettivi derivanti dalla partecipazione ai mercati infragiornalieri, qualora negativi, saranno 
+emesse entro l’ultimo giorno calendariale del mese n+2 presentando la propria fattura sul portale informatico.  
+  
+  15 
+DTF 
+  
+Ritiro Dedicato 
+  
+– 
+  
+Conguaglio  
+a  
+PMG 
+  
+– 
+  
+Tariffa Onnicomprensiva 
+  
+5.9.3. Emissione di fatture integrative e note di credito  
+In relazione a periodi precedenti che sono già stati oggetto di fatturazione, il GSE può accertare la necessità di procedere 
+a rettifiche o integrazioni.  In tale caso i corrispettivi di rettifica saranno riportati sul portale web secondo il criterio già 
+illustrato e l’operatore, dopo averne accertato la correttezza, ripeterà le procedure di accettazione sopra descritte, 
+secondo il calendario previsto per l a fatturazione corrente. La mancata emissione di una nota di credito comporta 
+l’impossibilità di emettere le successive fatture per l’energia ceduta.  
+5.9.4. Reverse Charge  
+A partire dal 1° gennaio 2015 il GSE è soggetto al regime di inversione contabile, c.d. r everse charge, per tutte le 
+operazioni soggette a IVA. L’inversione contabile prevede l’applicazione dell’IVA da parte del GSE, acquirente di energia 
+elettrica, invece che da parte del Produttore cedente.  
+Il Produttore emetterà, quindi, una fattura senza IVA tramite il portale informatico e il GSE integrerà successivamente 
+la fattura ricevuta con l’indicazione dell’aliquota IVA a cui è assoggettata la compravendita di energia elettrica.  
+5.10. Pagamento delle fatture  
+Le tempistiche di pagamento delle fatture, d i seguito riportate, sono comuni sia al Ritiro Dedicato, sia alla Tariffa 
+Onnicomprensiva.  
+La scadenza delle fatture emesse dalle parti relativamente ai corrispettivi di cessione dell’energia elettrica e il 
+corrispettivo a copertura dei costi del servizio  reso dal GSE, relativamente al mese “n”, è posta al giorno 20 lavorativo 
+del mese n+2 (calendario dei giorni lavorativi sulla piazza di Roma) e comunque entro l’ultimo giorno del mese n+2.  Il 
+rispetto di tale termine è subordinato all'emissione delle fat ture entro l’ultimo giorno calendariale del mese n+1; 
+diversamente non potrà essere garantito il pagamento entro il giorno 20 lavorativo del mese n+2.  
+La scadenza delle fatture emesse dalle parti relativamente ai corrispettivi di sbilanciamento e ai corri spettivi derivanti 
+dalla partecipazione ai mercati infragiornalieri, relativamente al mese “n”, è posta al giorno 20 lavorativo del mese n+3 
+(calendario dei giorni lavorativi sulla piazza di Roma) e comunque entro l’ultimo giorno del mese n+3. Il rispetto di tale 
+termine è subordinato all'emissione delle fatture entro l’ultimo giorno calendariale del mese n+3; diversamente non 
+potrà essere garantito il pagamento entro il giorno 20 lavorativo del mese n+3.  
+In relazione ai due capoversi precedenti si evidenzia che lo sfasamento temporale tra i corrispettivi relativi alla cessione 
+dell’energia elettrica e per la copertura del costo del servizio ed i corrispettivi relativi allo sbilanciamento e per la 
+partecipazione ai mercati infragiornalieri, è imputabile all a diversa tempistica con cui vengono comunicate al GSE le 
+relative misure (si vedano i precedenti § 5.8.1 e § 5.8.2).  
+Mensilmente, per ogni operatore elettrico, il GSE determina la posizione finanziaria netta, creditrice o debitrice, sulla 
+base delle risu ltanze delle fatture emesse, ricevute e in scadenza e la rappresenta sul portale informatico almeno 5 
+giorni prima del pagamento (giorno 20 del mese n+2).  
+Il saldo della posizione finanziaria netta sarà regolato mensilmente come segue:  
+ pagamento da parte del GSE, con accredito degli importi relativi alla posizione finanziaria netta a favore del 
+Produttore sul conto corrente bancario indicato dal Produttore nella "scheda dati anagrafici" dallo stesso 
+compilata.  Dovrà essere fornito lo st esso conto corrente bancario anche in presenza di più convenzioni 
+relative a diversi impianti;  
+ pagamento da parte del Produttore, con accredito degli importi relativi alla posizione finanziaria netta a 
+favore del GSE sul conto corrente bancario indicato dal GSE nel corpo delle proprie fatture.  
+La variazione delle coordinate bancarie dovrà avvenire esclusivamente da applicazione web come riportato nel manuale 
+utente dell’applicazione RID  
+La variazione sarà resa operativa dal secondo mese successivo al mese di ricevimento della comunicazione stessa.  
+5.11. Comunicazione indisponibilità per unità di produzione rilevanti alimentate a fonti rinnovabili non  
+programmabili  
+Attraverso il portale GPP dedicato agli operatori, nella sezione relativa alla gestione delle indisponibilità, il Produttore 
+titolare di unità di produzione rilevanti comunica le indisponibilità inerenti ai propri impianti in accordo con gli orari utili 
+  
+  16 
+DTF 
+  
+Ritiro Dedicato 
+  
+– 
+  
+Conguaglio  
+a  
+PMG 
+  
+– 
+  
+Tariffa Onnicomprensiva 
+  
+ai fini delle offerte sul mercato dell’energia. Attraverso le funzionalità disponibili può effettuare la visualizzazione e/o la 
+modifica di indisponibilità precedentemente inserite.  
+Di seguito si ricordano gli orari limite entro i quali trasmettere le indis ponibilità ai fini delle varie sessioni del mercato 
+dell’energia:  
+ Per MGP:  ore  10.15 del giorno D-1  
+ Per MI1:  ore  13.00 del giorno D-1  
+ Per MI2:  ore  14.30 del giorno D-1  
+ Per MI3:  ore  18.30 del giorno D-1   Per MI4:  ore  06.00 del giorno D   Per MI5: 
+ ore 9.30 del giorno D.  
+Le indisponibilità ricevute da GSE in orari non compatibili con i suddetti limiti, non saranno gestite da GSE ai fini della 
+contrattazione sul mercato elettrico dell’energia immessa in rete dall’Unità di Produzione nella titolarità del Produttore.  
+Le indisponibilità ricevute dal GSE in orari compatibili con i suddetti limiti, verranno prese in carico esclusivamente al 
+fine della minimizzazione dello sbilanciamento fisico dell’aggregato zonale nel quale è ricompresa la sing ola unità di 
+produzione.  
+Il caricamento delle indisponibilità avviene tramite una maschera dedicata del portale informatico predisposto dal GSE 
+che presenta una serie di menù a tendina e campi editabili, attraverso i quali inserire i parametri tipici dell’indisponibilità.  
+Per il funzionamento e l’utilizzo dell’applicazione, si rimanda al “Manuale utente” disponibile nella sezione 
+“Dispacciamento Rinnovabili” del sito internet del GSE.  
+5.12. Comunicazione indisponibilità in “Modalità Completa”  
+L’operatore, entro il giorno dieci del mese N+1 deve comunicare al GSE il consuntivo delle indisponibilità relative al mese 
+N utilizzando un file csv avente il seguente formato e rispondente al contenuto indicato nel documento di Regole 
+Tecniche:  
+CODICE 
+UP 
+DATA INIZIO ORA INIZIO DATA FINE EVENTO ORA FINE EVENTO POTENZA 
+      
+Il file csv deve essere caricato sul portale GPP dedicato agli operatori, nella sezione relativa al caricamento delle 
+indisponibilità in modalità completa.  
+5.13. Acquisizione dati tramite dispositivi di telelettura del GSE (RID/TO)  
+Ai fini del miglioramento delle previsioni, qualora ritenuto necessario dal GSE, il Produttore titolare di UP a fonte 
+rinnovabile è tenuto a sottoscrivere l’applicazione SAT. Il Produttore verrà quindi contattato dal GSE per p rocedere alla 
+trasmissione dei dati funzionali alla verifica della telelettura secondo quanto previsto nel documento delle “Regole 
+Tecniche”.  
+Inoltre, ove richiesto dal GSE, il titolare dell’UP è tenuto a comunicare ogni informazione utile per la telelett ura del 
+contatore al punto di immissione.  
+All’interno dell’applicazione SAT è stato predisposto uno specifico modulo per inserire i dati e le informazioni necessarie 
+a valutare la fattibilità dell’interfacciamento dell’impianto con i sistemi di telelettur a dei dati di produzione elettrica e 
+fonte primaria.  
+Il Produttore, procede a completare, in aggiunta alla scheda anagrafica dell’impianto già in parte precompilata sulla base 
+delle informazioni in possesso del GSE, le altre schede di acquisizione dati relative alle infrastrutture ed ai dispositivi già 
+presenti sugli impianti per il controllo e la misurazione dei dati di produzione elettrica e fonte primaria. I dati possono 
+essere inseriti in passi successivi.  
+L’invio del modulo può essere effettuato una sola volta dopo aver completato la fase di inserimento dei campi 
+obbligatori.  
+Il GSE procede a verificare l’attendibilità e la congruità dei dati e si riserva di richiedere ulteriori informazioni utili a  
+verificare la tele leggibilità dell’impianto e le condizioni di interfacciamento degli apparati del Produttore con quelli che 
+verranno installati presso l’impianto per la trasmissione dei dati.  
+  
+  17 
+DTF 
+  
+Ritiro Dedicato 
+  
+– 
+  
+Conguaglio  
+a  
+PMG 
+  
+– 
+  
+Tariffa Onnicomprensiva 
+  
+5.14. Recesso dal contratto di Ritiro Dedicato e di Tariffa Onnicomprensiva  
+Al fine di procedere alla risoluzione di un contratto di Ritiro Dedicato o di Tariffa Omnicomprensiva, il Produttore deve 
+inviare la richiesta tramite l’apposita funzionalità del portale web, utilizzando il modulo “Richiesta recesso dal contratto 
+di Ritiro Dedicato o di Tariffa Onnicomprensiva” presente nella sezione “Contratti” cliccando “Disdetta Contratto”.  
+Il modulo va compilato in tutte le sue parti, sottoscritto e caricato nell’apposita sezione unitamente alla copia del  
+documento d’identità in corso di validità del Produttore o del Legale Rappresentante e alla eventuale ulteriore 
+documentazione richiesta.  
+Si ricorda che in caso di dismissione dell’impianto, il Produttore è tenuto a darne comunicazione: 
+ al sistema GAUDÌ di Terna effettuando la procedura di dismissione dell’UP ovvero dell’impianto di produzione 
+sul suddetto portale ai sensi dell’articolo 36novies della deliberazione ARERA 424/2016/R/EEL; 
+ al GSE attraverso la procedura di richiesta di recesso, come sopra descritta, allegando idonea documentazione 
+a supporto dell’avvenuta dismissione; 
+L’accoglimento della richiesta di recesso dal contratto sarà effettuato dal GSE tenendo conto delle tempistiche previste 
+dall’art. 15 “Recesso dal Contratto” dei contratti di Ritiro Dedicato e di Tariffa Onnicomprensiva.  
+A valle dell’accettazione della richiesta di risoluzione del contratto, il Produttore riceverà un’e -mail di conferma,  agli 
+indirizzi di posta elettronica indicati nella sezione “Dati amministrativi”,  in cui verrà riportata la data di chiusura del 
+contratto stesso. 
+A seguito della chiusura del contratto RID , il GSE procederà a determinare ogni partita commerciale al fine chiudere il 
+rapporto contrattuale in essere. Si ricorda che, in coerenza con quanto previsto dall’articolato contratt uale, a seguito 
+dell’accoglimento della disdetta, sarà possibile, eventualmente, presentare una nuova istanza RID, non prima di un anno 
+solare. 
+6. Attivazione e gestione del contratto per il Conguaglio a Prezzi Minimi Garantiti   
+6.1. Attivazione del Contratto Conguaglio PMG-ML  
+Il Produttore riceverà comunicazione per e -mail dell’accettazione dell’istanza da parte del GSE entro il secondo giorno 
+successivo alla data di accettazione con contestuale indicazione delle modalità e tempistiche per il pagamento dei 
+corrispettivi amministrativi di cui al successivo paragrafo 6.3. In particolare , sarà resa disponibile nella sezione “Fatture 
+e Pagamenti” la fattura riportante l’importo a debito calcolato secondo la tabella di cui al successivo paragrafo 6.3.  
+Il pagamento de i corrispettivi amministrativi è una condizione necessaria per l’attivazione dell’istanza di Conguaglio  
+PMG-ML e deve essere effettuato entro 10 giorni dalla data emissione della fattura da parte del GSE. Oltre tale termine, 
+la richiesta verrà esclusa.  
+Nel momento in cui il GSE verifica il pagamento dei suddetti corrispettivi, il Produttore verrà abilitato alla stampa della 
+“Dichiarazione di Accettazione” sul portale web. In particolare, il Produttore dovrà stamparne una copia da sottoscrivere 
+e inviare al GSE esclusivamente tramite portale.  
+Il GSE verifica la congruenza dei dati riportati sulla dichiarazione di accettazione nonché l’assenza di cancellature e/o 
+aggiunte da parte del Produttore.  
+In seguito alla verifica positiva, il GSE provvede ad attivare il contratto e rende disponibile sul portale web la copia dello 
+stesso, sottoscritta digitalmente dal legale rappresentante del GSE. Qualora vengano riscontrate delle difformità della 
+documentazione fornita dal Produttore rispetto a quella prodotta aut omaticamente dal portale web, il GSE accerta i 
+motivi delle modifiche e interviene per le eventuali correzioni.  
+Per le istanze di Conguaglio PMG -ML non è consentito il recesso anticipato in corso d’anno, fermo restando l’obbligo 
+del Produttore di comunicare tramite l’apertura di una segnalazione sul portale di supporto,  l’eventuale dismissione 
+dell’impianto, informazione che dovrà essere inserita anche nel portale GAUDÍ di Terna.   
+6.2. Corrispettivo integrativo per il Conguaglio PMG-ML  
+Il corrispettivo integrativo è pari alla differenza, se positiva, tra:   
+  
+  18 
+DTF 
+  
+Ritiro Dedicato 
+  
+– 
+  
+Conguaglio  
+a  
+PMG 
+  
+– 
+  
+Tariffa Onnicomprensiva 
+  
+ il prodotto tra i prezzi minimi garantiti di cui all’articolo 7 dell’Allegato A della Deliberazione 280/07 e la 
+quantità di energia elettrica immessa in rete nel periodo di validità del contratto (limitatamente alla quantità 
+di energia elettrica a cui tali prezzi sono riferiti su base annuale solare)  
+e  
+ il prodotto tra il prezzo zonale orario e la medesima quantità di energia elettrica immessa di cui al punto 
+precedente.  
+Il corrispettivo si applica all’energia elettrica prodotta e immessa in rete dall’impianto, incrementata, nel caso di  punti 
+di immissione in bassa e media tensione, di un fattore percentuale secondo le stesse modalità previste dall’articolo 76, 
+comma 1, lettera a), del Testo Integrato Settlement.  
+6.3. Corrispettivo a copertura dei costi amministrativi per i servizi resi dal GSE  
+Il corrispettivo a copertura dei costi amministrativi è definito ai sensi del D.M. 24 dicembre 2014; deve essere pagato 
+dal Produttore annualmente e in via anticipata ai fini dell’efficacia del Contratto o del suo eventuale rinnovo.  
+Il termine di scadenza delle fatture è fissato a 10 giorni calendariali dalla data di emissione della fattura; nel caso in cui 
+la data di scadenza della fattura non ricada un giorno lavorativo il pagamento potrà essere effettuato entro il primo 
+giorno lavorativo successivo a tale data. Il versamento dovrà essere effettuato sulle coordinate bancarie indicate nella 
+fattura del GSE.  
+La determinazione del corrispettivo a copertura dei costi amministrativi avviene a seconda dell’anno di riferimento.  
+6.3.1.  Corrispettivo amministrativo per l’anno 2014  
+Per l’anno 2014, si prende il valore più alto tra il corrispettivo 0,50 €/kW di potenza dell’impianto e la soglia minima di 
+15,00 € da corrispondere al GSE, ovvero  
+CA=max[S;(0,50×P)]  
+dove:  
+ CA  = corrispettivo a copertura dei costi amministrativi;  
+0,50 = €/kW pari a quanto definito in relazione alla potenza;  
+ P  = potenza impianto in kW;  
+ S  = soglia pari a 15 € per qualsiasi tipo di impianto.  
+6.3.2.  Corrispettivo amministrativo per gli anni successivi al 2014  
+A partire dal 2015 il corrispettivo da pagare anticipatamente è pari alla tariffa prevista dal DM 24 dicembre 2014; tutte 
+le informazioni sono disponibili nel documento Modalità operative per il riconoscimento dei costi sostenuti dal GSE.  
+6.4. Tempistiche di pubblicazione dei corrispettivi sul portale informatico  
+Il corrispettivo integrativo di cui al paragrafo 6.2 è oggetto di fatturazione da parte del Produttore con periodicità 
+annuale.  
+Ai fini della valorizzazione e della relativa fatturazione del corrispettivo integrativo il GSE, entro il giorno 15 del mese di 
+aprile dell’anno successivo a quello di competenza, rende disponibili al Produttore, sul portale informatico, i dati inerenti 
+alla valorizzazione commerciale delle partite, fatto salvo il caso di mancata comunicazione delle misure di cui all’articolo 
+13, comma 1 dell’Allegato A alla Deliberazione 280/07, da parte del soggetto responsabile della rilevazione e 
+registrazione delle misure (Gestore di Rete).  
+Nel caso in cui il controllo descritto abbia esito positivo, il Produttore riceve tramite e -mail la conferma dell’avvenuta 
+pubblicazione dei corrispettivi sul portale informatico.  
+Nel caso di mancata comunicazione delle misure da parte del Gestore di Rete (articolo 13, comma 1 della Deliberazione 
+280/07), il GSE procede ad inviare un sollecito mediante e-mail al soggetto responsabile della rilevazione e registrazione 
+delle misure.  
+Il Produttore ha la possibilità di visionare il Cor rispettivo pubblicato nell’apposita sezione “Corrispettivi > Storico 
+Corrispettivi”, nella quale è disponibile anche il dettaglio di tutti i corrispettivi, attivi e passivi, calcolati per la par tita 
+commerciale pubblicata.  
+  
+  19 
+DTF 
+  
+Ritiro Dedicato 
+  
+– 
+  
+Conguaglio  
+a  
+PMG 
+  
+– 
+  
+Tariffa Onnicomprensiva 
+  
+Una volta resi disponibili da parte del GSE i corrispettivi mensili, il Produttore, nell’apposita sezione del portale “Fatture 
+e Pagamenti > Gestione”, può procedere alla compilazione della fattura in formato elettronico inserendo la data e il 
+numero fattura che vuole assegnare al documento. A tale proposito, ove applicabile, si veda quanto indicato in dettaglio 
+al paragrafo 5.10 per la fatturazione di Rid e TO.  
+Il termine di scadenza della fattura (“Data di pagamento”) emessa dal Produttore è fissato all’ultimo giorno lavorativo 
+del mese successivo a quello di invio della fattura (data di “accettazione” della fattura sul Portale GSE). Le fatture emesse 
+dal Produttore con modalità diverse da quelle indicate non saranno accettate dal GSE.  
+Si evidenzia che, esclusivamente nel caso di reces so anticipato dal contratto  per dismissione dell’impianto, il GSE 
+applicherà gli scaglioni relativi ai prezzi minimi garantiti (PMG) “pro-quota anno” riproporzionandoli sulla base dei giorni 
+utili di ricomprensione nel suddetto contratto PMG.  
+6.5. Rinnovo del contratto Conguaglio PMG-ML  
+Il contratto PMG-ML ha durata annuale (1° gennaio – 31 dicembre). Il 30 novembre di ogni anno il contratto passerà 
+sistematicamente da uno stato “attivo” ad uno stato “in attesa di rinnovo” con contestuale comunicazione via e-mail in 
+merito agli adempimenti da espletare per il rinnovo. La richiesta di rinnovo deve essere effettuata mediante l’apposita 
+funzionalità sul portale informatico RID. Nel caso di richiesta di rinnovo effettuata entro il 31 dicembre, il contratto verrà 
+rinnovato con decorrenza 1° gennaio dell’anno successivo, mantenendo pertanto continuità di efficacia. In caso di 
+mancato rinnovo entro il suddetto termine, il contratto verrà chiuso d’ufficio.  
+La conferma della richiesta di rinnovo implica una dichiarazion e ai sensi del DPR 445/2000 in cui il Produttore dichiara 
+che non sussistono variazioni riguardo alla titolarità e ai dati caratteristici dell’impianto rispetto a quanto dichiarato 
+nella precedente istanza.  
+All’atto della conferma di rinnovo, verrà pubbli cata sul portale informatico la fattura del corrispettivo a copertura dei 
+costi amministrativi di cui al paragrafo 6.3.  
+7. Modalità di comunicazione tra GSE e Produttore 
+Le comunicazioni tra GSE e Produttori devono avvenire utilizzando gli strumenti messi a disposizione sul portale RID.   
+In particolare, si riportano di seguito le modalità per comunicare al GSE alcune tra le variazioni più rilevanti che possono 
+interessare il rapporto contrattuale.  
+La variazione del Legale Rappresentante, della Sede Legale e  della Residenza possono essere effettuate  direttamente 
+dal Produttore mediante l’apposita funzionalità presente nell’home page dell’Area Clienti del portale informatico del 
+GSE.  
+La variazione di potenza sull’impianto (esclusivamente per contratti attivi ) va comunicata con l’apertura di una 
+segnalazione sul portale di supporto del GSE  secondo le modalità riportate nello stesso.  Si rammenta che la 
+comunicazione di potenziamento al GSE deve fare seguito al completamento dell’iter di modifica della potenza 
+impiantistica sul registro GAUDI.  
+Si ricorda inoltre  che le variazioni  di potenza di impianti contrattualizzati a Tariffa omnicomprensiva devono essere 
+comunicate tramite apposita  richiesta sul portale SIAD del GSE, allegando la documentazione indicata con News del 
+21/3/2016 sul portale GSE.  
+La variazione del titolare dell’impianto deve essere richiesta utilizzando la funzionalità “ Trasferimento della titolarità” 
+prevista nel portale RID seguendo la procedura indicata nel “ Manuale utente per la richie sta di voltura per il Ritiro 
+Dedicato, Tariffa Omnicomprensiva (TO) e PMG-ML” pubblicato sul sito del GSE. 
+In relazione alla variazione del titolare dell’impianto per i contratti PMG-ML non è presente la funzionalità sul portale 
+RID e pertanto sarà necessario inviare la documentazione al GSE come indicato nel suddetto manuale.  
+La variazione dell’IBAN deve essere richiesta utilizzando la funzionalità “Variazione Dati Bancari” prevista nel portale RID 
+soltanto per i contratti nello stato “Attivo”.  
+Nel caso in cui non vi sia una modalità appositamente predisposta, è inoltre attivo un Contact Center ( numero verde 
+800.16.16.16) presso il quale il Produttore può ottenere informazioni relative al proprio status e supporto di carattere 
+tecnico informatico.  

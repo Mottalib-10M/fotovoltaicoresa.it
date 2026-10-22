@@ -1,0 +1,20 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { CONTACT_EMAIL, SITE_NAMES } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+import { contactPageSchema } from '../../lib/seo';
+const lang = 'it';
+const description = 'Scriveteci se un prezzo del GSE o di ARERA non è aggiornato, se il vostro impianto produce più o meno del simulatore o se volete incorporare il calcolatore.';
+---
+<PageLayout title={`Contatti ${SITE_NAMES[lang]}: segnalare un errore, incorporare`} description={description} lang={lang} noindex={true} jsonLd={[contactPageSchema({ name: 'Contatti', description, path: route('contact', lang), lang })]} breadcrumbs={[{ label: 'Contatti' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none">
+    <h1>Contatti</h1>
+    <p>E-mail: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. Di solito rispondiamo entro una settimana.</p>
+    <h2>Il vostro impianto produce diversamente</h2>
+    <p>Mandateci il link di condivisione del simulatore e i dati annuali dell'inverter o del contatore di produzione, se possibile con l'orientamento e l'inclinazione reali. Le cause più frequenti sono ombre nel pomeriggio, un inverter sottodimensionato o un anno poco soleggiato. Se l'errore è nostro lo correggiamo e aggiungiamo il caso alle verifiche.</p>
+    <h2>Incorporare il simulatore</h2>
+    <p>Comuni, sportelli energia, associazioni di consumatori e redazioni locali possono incorporarlo gratuitamente: <a href={route('widget', lang)}>Inserisci il calcolatore</a>.</p>
+    <h2>Che cosa non offriamo</h2>
+    <p>Nessun preventivo, nessun contatto con installatori, nessun sopralluogo, nessuna consulenza fiscale. Per le pratiche rivolgetevi al GSE, al vostro distributore di energia o a un professionista abilitato.</p>
+  </div>
+</PageLayout>

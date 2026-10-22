@@ -1,0 +1,28 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import LegalIdentity from '../../components/LegalIdentity.astro';
+import { AUTHOR_NAME, CLARITY_ID, CONTACT_EMAIL, GA4_ID, LAST_UPDATED, SITE_URL } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+const lang = 'it';
+---
+<PageLayout title="Note legali: editore e hosting del simulatore fotovoltaico" description="Note legali: chi pubblica il simulatore fotovoltaico per comune, chi ne risponde e chi lo ospita; finalità del sito, responsabilità, incorporamento e dati personali." lang={lang} noindex={true} breadcrumbs={[{ label: 'Note legali' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none">
+    <h1>Note legali</h1>
+    <p>Informazioni sull'editore di {SITE_URL}.</p>
+    <h2>Editore</h2>
+    <LegalIdentity lang={lang} />
+    <h2>Responsabile dei contenuti</h2>
+    <p>{AUTHOR_NAME}, indirizzo come sopra, e-mail <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
+    <h2>Hosting</h2>
+    <LegalIdentity mode="hosting" lang={lang} />
+    <h2>Finalità del sito</h2>
+    <p>Il sito stima la produzione e la resa di un impianto fotovoltaico domestico con i dati di irraggiamento PVGIS della Commissione europea, i prelievi orari delle famiglie misurati da ARERA, i prezzi del ritiro dedicato pubblicati dal GSE e la detrazione indicata dall'Agenzia delle Entrate. Non è un'offerta di un installatore, di un fornitore di energia, del GSE o di un'autorità pubblica, e non è consulenza fiscale, tecnica o legale. I passaggi del calcolo sono descritti in <a href={route('method', lang)}>Come calcoliamo</a>.</p>
+    <h2>Responsabilità</h2>
+    <p>I valori sono controllati automaticamente prima di ogni pubblicazione e riallineati quando una fonte cambia; non garantiamo la produzione di un impianto specifico. I siti di terzi collegati sono sotto la responsabilità dei loro gestori. Segnalate gli errori dalla <a href={route('contact', lang)}>pagina contatti</a>.</p>
+    <h2>Incorporamento</h2>
+    <p>Il simulatore può essere incorporato gratuitamente con un iframe, purché il link alla fonte resti visibile: <a href={route('widget', lang)}>Inserisci il calcolatore</a>.</p>
+    <h2>Dati personali e cookie</h2>
+    {GA4_ID ? (<p>Ciò che scrivete nei simulatori resta nel vostro browser. Il sito deposita i cookie di misura del pubblico di Google Analytics (<code>_ga</code>, <code>_ga_{GA4_ID.replace('G-', '')}</code>, al massimo 13 mesi), senza pubblicità{CLARITY_ID && '; la stabilità è controllata con Microsoft Clarity, senza cookie'}. Dettagli: <a href={route('privacy', lang)}>informativa privacy</a> e pagina <a href={route('cookies', lang)}>cookie</a>.</p>) : (<p>Ciò che scrivete nei simulatori resta nel vostro browser e il sito non deposita cookie{CLARITY_ID && '; la stabilità è controllata in forma anonima con Microsoft Clarity, senza cookie'}. Vedi l'<a href={route('privacy', lang)}>informativa privacy</a> e la pagina <a href={route('cookies', lang)}>cookie</a>.</p>)}
+    <p>Versione: {LAST_UPDATED}.</p>
+  </div>
+</PageLayout>

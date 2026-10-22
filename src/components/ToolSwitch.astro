@@ -1,0 +1,12 @@
+---
+/** Un solo simulatore, una vista per pagina (pagine di calcolo, città, incorporamento). */
+import FvCalc from './calc/FvCalc';
+import type { Locale } from '../i18n/routes';
+import type { Tool } from '../lib/guide-types';
+import { luogoCitta, ROMA } from '../lib/engine/dati';
+interface Props { tool?: Tool; lang: Locale; methodHref?: string; preset?: Record<string, never> }
+const { tool = 'rendimento', lang, methodHref, preset = {} } = Astro.props;
+const { citta, ...num } = preset as Record<string, string | number>;
+const luogo = typeof citta === 'string' ? luogoCitta(citta) : ROMA;
+---
+<FvCalc client:load lang={lang} vista={tool} luogo={luogo} preset={num as Record<string, number>} methodHref={methodHref} />

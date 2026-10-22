@@ -1,0 +1,279 @@
+{
+  "_leggimi": "Tutti i valori di legge e le ipotesi del calcolatore. Ogni blocco cita la sua fonte (_fonte) ed è stato letto alla data retrieved_at. Produzione: regioni.json e public/data/comuni.json (PVGIS), autoconsumo: regioni.json, prezzi del ritiro dedicato: rid-2026.json. Mai un numero scritto a mano nelle pagine o nel codice (RECETTE §4).",
+  "year": 2026,
+  "retrieved_at": "2026-10-22",
+  "valid_from": "2026-01-01",
+  "valid_to": "2026-12-31",
+  "detrazione": {
+    "_fonte": "Agenzia delle Entrate, La misura della detrazione e i limiti di detraibilità (L. 199/2025, art. 1 c. 22 lett. b n. 1); scheda Che cos'è (aggiornata al 29 luglio 2026); scheda Come e quando (bonifico parlante, comunicazione ENEA entro 90 giorni per gli interventi con fonti rinnovabili).",
+    "aliquota_prima_casa": 0.5,
+    "aliquota_altri": 0.36,
+    "tetto_eur": 96000,
+    "rate": 10,
+    "anno_2027": {
+      "prima_casa": 0.36,
+      "altri": 0.3
+    },
+    "anni_2028_2033": {
+      "aliquota": 0.3
+    },
+    "sconto_cessione": "solo dove la normativa ancora lo consente (scheda AdE)",
+    "enea_giorni": 90
+  },
+  "costi": {
+    "_fonte": "DM MASE n. 414 del 7 dicembre 2023 (decreto CER), costo di investimento massimo di riferimento, IVA esclusa; DL 34/2020 art. 119 comma 6, limite di spesa per i sistemi di accumulo. Sono riferimenti di legge usati come valori iniziali, non prezzi di mercato: il lettore inserisce il proprio preventivo.",
+    "fv_eur_kw": 1500,
+    "fv_eur_kw_20_200": 1200,
+    "accumulo_eur_kwh": 1000,
+    "superbonus_fv_eur_kw": 2400
+  },
+  "prezzo_evitato": {
+    "_fonte": "ARERA, condizioni economiche per i clienti vulnerabili, cliente domestico tipo, quattro trimestri 2026 (comunicati stampa). Il prezzo evitato da ogni kWh autoconsumato è materia energia + oneri generali + imposte; trasporto e commercializzazione restano in bolletta perché hanno quote fisse e di potenza.",
+    "trimestri": [
+      {
+        "t": "I",
+        "totale": 27.97,
+        "energia": 13.75,
+        "commercializzazione": 2.24,
+        "trasporto": 6.18,
+        "oneri": 3.03,
+        "imposte": 2.77
+      },
+      {
+        "t": "II",
+        "totale": 30.24,
+        "energia": 15.81,
+        "commercializzazione": 2.24,
+        "trasporto": 6.18,
+        "oneri": 3.03,
+        "imposte": 2.98
+      },
+      {
+        "t": "III",
+        "totale": 31.63,
+        "energia": 16.92,
+        "commercializzazione": 2.11,
+        "trasporto": 6.18,
+        "oneri": 3.32,
+        "imposte": 3.1
+      },
+      {
+        "t": "IV",
+        "totale": 43.43,
+        "energia": 27.64,
+        "commercializzazione": 2.11,
+        "trasporto": 6.18,
+        "oneri": 3.32,
+        "imposte": 4.18
+      }
+    ],
+    "variazione_iv_trimestre": 0.373
+  },
+  "rid": {
+    "_fonte": "GSE, ritiro dedicato: prezzi orari zonali o prezzi minimi garantiti (DTF RID-TO-PMG §5.3); ARERA, prezzi minimi garantiti 2026; GSE, tariffe a copertura dei costi amministrativi (DM 24 dicembre 2014).",
+    "pmg_eur_mwh": 47.5,
+    "pmg_kwh_max": 1500000,
+    "pmg_kw_max_incentivati": 100,
+    "fee_eur_kw": [
+      {
+        "fino_kw": 20,
+        "eur": 0.7
+      },
+      {
+        "fino_kw": 200,
+        "eur": 0.65
+      },
+      {
+        "fino_kw": 1000000,
+        "eur": 0.6
+      }
+    ],
+    "fee_esente_fino_kw": 3,
+    "fee_max_eur": 10000,
+    "pesi_fasce": {
+      "F1": 0.689,
+      "F2": 0.148,
+      "F3": 0.163
+    },
+    "_pesi_fasce": "Quota della produzione fotovoltaica nelle fasce F1, F2 e F3 (delibera AEEG 181/06), calcolata dal sito sulla serie oraria PVGIS 2019-2023 dei 20 capoluoghi di regione, festività nazionali comprese. Il GSE paga il prezzo zonale orario; la media mensile per fascia pesata così è un'approssimazione."
+  },
+  "ssp": {
+    "_fonte": "ARERA, deliberazioni 78/2025/R/efr e 213/2025/R/efr; GSE, Scambio sul posto: stop al meccanismo",
+    "ultimo_giorno_domande": "2025-09-26",
+    "esercizio_entro": "2025-05-29",
+    "durata_max_anni": 15
+  },
+  "cer": {
+    "_fonte": "DM MASE n. 414/2023 (decreto CER), allegato 1; GSE, Regole operative CACER, aggiornamento 2025",
+    "tip_base_eur_mwh": 80,
+    "tip_pz_rif": 180,
+    "tip_max_eur_mwh": 120,
+    "correzione_centro": 4,
+    "correzione_nord": 10,
+    "durata_anni": 20,
+    "pnrr_quota": 0.4,
+    "pnrr_comuni_sotto": 50000,
+    "pnrr_fine_lavori": "2026-06-30",
+    "pnrr_esercizio_entro": "2027-12-31"
+  },
+  "modello": {
+    "_fonte": "Ipotesi del sito, spiegate nella pagina Metodo",
+    "perdite_pct": 14,
+    "inclinazione_rif": 30,
+    "batteria_rendimento": 0.9,
+    "batteria_utile": 0.9,
+    "consumo_soglia_profilo": 2400,
+    "anni_orizzonte": 20,
+    "kwp_per_pannello": 0.43,
+    "m2_per_pannello": 1.95
+  },
+  "sources": {
+    "pvgis": {
+      "url": "https://re.jrc.ec.europa.eu/pvg_tools/it/",
+      "label": {
+        "it": "Commissione europea, JRC: PVGIS 5.3, banca dati SARAH-3 2005-2023",
+        "en": "European Commission, JRC: PVGIS 5.3, SARAH-3 database 2005-2023"
+      }
+    },
+    "geonames": {
+      "url": "https://download.geonames.org/export/dump/",
+      "label": {
+        "it": "GeoNames: elenco dei comuni italiani con codice ISTAT (licenza CC BY 4.0)",
+        "en": "GeoNames: list of Italian comuni with ISTAT codes (CC BY 4.0 licence)"
+      }
+    },
+    "arera_consumi": {
+      "url": "https://www.arera.it/dati-e-statistiche/dettaglio/analisi-dei-consumi-dei-clienti-domestici",
+      "label": {
+        "it": "ARERA: analisi dei consumi dei clienti domestici, dati regionali 2025",
+        "en": "ARERA: analysis of household electricity use, regional data 2025"
+      }
+    },
+    "arera_q4": {
+      "url": "https://www.arera.it/comunicati-stampa/dettaglio/elettricita-maggior-tutela-373-nel-iv-trimestre-2026-per-i-clienti-vulnerabili",
+      "label": {
+        "it": "ARERA: condizioni per i clienti vulnerabili, IV trimestre 2026",
+        "en": "ARERA: prices for vulnerable customers, fourth quarter 2026"
+      }
+    },
+    "arera_q3": {
+      "url": "https://www.arera.it/comunicati-stampa/dettaglio/elettricita-maggior-tutela-46-nel-iii-trimestre-2026-per-i-clienti-vulnerabili",
+      "label": {
+        "it": "ARERA: condizioni per i clienti vulnerabili, III trimestre 2026",
+        "en": "ARERA: prices for vulnerable customers, third quarter 2026"
+      }
+    },
+    "arera_q2": {
+      "url": "https://www.arera.it/comunicati-stampa/dettaglio/elettricita-maggior-tutela-81-nel-ii-trimestre-2026per-i-clienti-vulnerabili",
+      "label": {
+        "it": "ARERA: condizioni per i clienti vulnerabili, II trimestre 2026",
+        "en": "ARERA: prices for vulnerable customers, second quarter 2026"
+      }
+    },
+    "arera_q1": {
+      "url": "https://www.arera.it/comunicati-stampa/dettaglio/elettricita-maggior-tutela-27-i-trimestre-2026-clienti-vulnerabili-calo-principali-voci-bolletta",
+      "label": {
+        "it": "ARERA: condizioni per i clienti vulnerabili, I trimestre 2026",
+        "en": "ARERA: prices for vulnerable customers, first quarter 2026"
+      }
+    },
+    "arera_pmg": {
+      "url": "https://www.arera.it/elettricita/ritiro-dedicato-e-prezzi-minimi-garantiti",
+      "label": {
+        "it": "ARERA: ritiro dedicato e prezzi minimi garantiti 2026",
+        "en": "ARERA: dedicated withdrawal and guaranteed minimum prices 2026"
+      }
+    },
+    "arera_213": {
+      "url": "https://www.arera.it/atti-e-provvedimenti/dettaglio/25/213-25",
+      "label": {
+        "it": "ARERA: deliberazione 213/2025/R/efr sulla chiusura dello scambio sul posto",
+        "en": "ARERA: resolution 213/2025/R/efr on the end of net metering"
+      }
+    },
+    "gse_rid": {
+      "url": "https://www.gse.it/servizi-per-te/fotovoltaico/ritiro-dedicato",
+      "label": {
+        "it": "GSE: ritiro dedicato",
+        "en": "GSE: ritiro dedicato (dedicated withdrawal)"
+      }
+    },
+    "gse_rid_prezzi": {
+      "url": "https://www.gse.it/documenti_site/Documenti%20GSE/Servizi%20per%20te/RITIRO%20DEDICATO/Altri%20contenuti/Prezzi%20medi%20RID%202026.pdf",
+      "label": {
+        "it": "GSE: prezzi medi mensili per fascia oraria e zona di mercato 2026",
+        "en": "GSE: average monthly prices by time band and market zone 2026"
+      }
+    },
+    "gse_rid_dtf": {
+      "url": "https://www.gse.it/documenti_site/Documenti%20GSE/Servizi%20per%20te/RITIRO%20DEDICATO/Regole%20e%20procedure/RID_TO_PMG_DTF.PDF",
+      "label": {
+        "it": "GSE: disciplinare tecnico e funzionale RID, TO e PMG",
+        "en": "GSE: technical rules for RID, all-inclusive tariff and PMG"
+      }
+    },
+    "gse_ssp": {
+      "url": "https://www.gse.it/servizi-per-te/news/scambio-sul-posto-stop-al-meccanismo",
+      "label": {
+        "it": "GSE: scambio sul posto, stop al meccanismo",
+        "en": "GSE: net metering (scambio sul posto) closed"
+      }
+    },
+    "gse_cer": {
+      "url": "https://www.gse.it/servizi-per-te/autoconsumo/gruppi-di-autoconsumatori-e-comunita-di-energia-rinnovabile",
+      "label": {
+        "it": "GSE: gruppi di autoconsumatori e comunità di energia rinnovabile",
+        "en": "GSE: self-consumer groups and renewable energy communities"
+      }
+    },
+    "gse_cer_tariffa": {
+      "url": "https://www.gse.it/servizi-per-te/autoconsumo/gruppi-di-autoconsumatori-e-comunita-di-energia-rinnovabile/corrispettivi-e-tariffa",
+      "label": {
+        "it": "GSE: corrispettivi e tariffa incentivante delle CACER",
+        "en": "GSE: payments and premium tariff for energy communities"
+      }
+    },
+    "dm_cer": {
+      "url": "https://www.gse.it/documenti_site/Documenti%20GSE/Servizi%20per%20te/AUTOCONSUMO/Altri%20contenuti/Decreto%20CER.pdf",
+      "label": {
+        "it": "MASE: decreto CER n. 414 del 7 dicembre 2023",
+        "en": "Ministry of Environment and Energy Security: CER decree no. 414 of 7 December 2023"
+      }
+    },
+    "regole_cacer": {
+      "url": "https://www.gse.it/documenti_site/Documenti%20GSE/Servizi%20per%20te/AUTOCONSUMO/Gruppi%20di%20autoconsumatori%20e%20comunita%20di%20energia%20rinnovabile/Regole%20e%20procedure/Allegato%201%20Regole%20Operative%20CACER.pdf",
+      "label": {
+        "it": "GSE: regole operative CACER",
+        "en": "GSE: operating rules for energy communities (CACER)"
+      }
+    },
+    "ade_misura": {
+      "url": "https://www.agenziaentrate.gov.it/portale/la-misura-della-detrazione-limiti-detraibilita",
+      "label": {
+        "it": "Agenzia delle Entrate: la misura della detrazione e i limiti di detraibilità",
+        "en": "Italian Revenue Agency: deduction rate and spending limits"
+      }
+    },
+    "ade_lavori": {
+      "url": "https://www.agenziaentrate.gov.it/portale/schede/agevolazioni/detrristredil36/per-quali-lavori-detrristredil36",
+      "label": {
+        "it": "Agenzia delle Entrate: per quali lavori spetta la detrazione",
+        "en": "Italian Revenue Agency: which works qualify for the deduction"
+      }
+    },
+    "ade_come": {
+      "url": "https://www.agenziaentrate.gov.it/portale/schede/agevolazioni/detrristredil36/comequando-detrristredil36",
+      "label": {
+        "it": "Agenzia delle Entrate: come e quando si richiede la detrazione",
+        "en": "Italian Revenue Agency: how and when to claim the deduction"
+      }
+    },
+    "dl34_119": {
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2020-05-19;34~art119",
+      "label": {
+        "it": "Decreto-legge 34/2020, articolo 119 (limiti di spesa per fotovoltaico e accumulo)",
+        "en": "Decree-Law 34/2020, article 119 (spending caps for PV and storage)"
+      }
+    }
+  }
+}

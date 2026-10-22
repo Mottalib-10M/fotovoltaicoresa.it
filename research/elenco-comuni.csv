@@ -1,0 +1,33 @@
+<HTML>
+<HEAD>
+<TITLE>ISTAT</TITLE>
+<base href="/errori/standard/">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="robots" content="noindex" />
+<meta name="robots" content="nofollow" />
+<meta name="googlebot" content="noindex">
+<meta name="googlebot-news" content="nosnippet">
+<LINK href="stiletesti.css" type=text/css rel=stylesheet>
+<BODY>
+<center>
+<TABLE id=pagina height="100%" cellSpacing=0 cellPadding=0 width="50%" border=0>
+<TR height=10%><TD align=center colSpan=0><IMG src="avviso.jpg"></TD></TR>
+<TR height=20%>
+<TD style="PADDING-LEFT: 16px; PADDING-BOTTOM: 10px; PADDING-TOP: 6px" align=left valign=bottom>
+<H6 class=boxc_tit>Avviso</H6><br></TD></TR>
+<TR><TD valign=top align=left style="PADDING-LEFT: 16px; PADDING-BOTTOM: 10px; PADDING-TOP: 6px" >
+<!MESSAGGIO>
+<FONT class=txtB10>
+L'attivit&agrave; del sito &egrave; momentaneamente sospesa per manutenzione.
+<!--BR>Il servizio riprender&agrave; regolarmente alle ore 10:00 del 25 settembre 2015.<-->
+<BR>
+<BR>
+<!--BR>
+The site is currently not available due to technical problems.
+<BR>We should be back on line at 7.30 p.m. of 06/14/2014.<-->
+</FONT>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

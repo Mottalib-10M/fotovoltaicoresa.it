@@ -1,0 +1,29 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { AUTHOR_NAME, CONTACT_EMAIL, LAST_UPDATED, REVIEW_CYCLE_MONTHS, SITE_NAMES } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+const lang = 'it';
+---
+<PageLayout title={`Principi editoriali di ${SITE_NAMES[lang]}: fonti e verifiche`} description="Da dove vengono irraggiamento, consumi orari, prezzi del ritiro dedicato e aliquote della detrazione, ogni quanto li controlliamo, chi ne risponde e cosa succede se un numero è sbagliato." lang={lang} noindex={true} breadcrumbs={[{ label: 'Principi editoriali' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none">
+    <h1>Principi editoriali e correzioni</h1>
+    <p>Chi spende migliaia di euro per un impianto dopo aver letto questo sito si affida ai nostri numeri. Ecco da dove viene ciascuno e cosa succede quando uno è sbagliato.</p>
+    <h2>Responsabilità</h2><p>Contenuti e simulatori sono sotto la responsabilità di {AUTHOR_NAME}. Contatto: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
+    <h2>Solo fonti primarie</h2>
+    <ul>
+      <li><strong>PVGIS della Commissione europea</strong> (Centro comune di ricerca): irraggiamento e produzione in ogni punto;</li>
+      <li><strong>ARERA</strong>: prelievi orari delle famiglie, prezzi del cliente tipo, prezzi minimi garantiti, delibere sullo scambio sul posto;</li>
+      <li><strong>GSE</strong>: prezzi del ritiro dedicato, corrispettivi, regole delle comunità energetiche;</li>
+      <li><strong>Agenzia delle Entrate e Normattiva</strong>: detrazione, aliquote e limiti di spesa;</li>
+      <li><strong>Ministero dell'Ambiente e della Sicurezza Energetica</strong>: decreto CER;</li>
+      <li><strong>GeoNames</strong>: elenco dei comuni con codici ISTAT e coordinate.</li>
+    </ul>
+    <p>Pagine di venditori, blog di installatori e altri simulatori non sono fonti: citiamo solo testi ufficiali e dati pubblici.</p>
+    <h2>Verifiche prima di ogni pubblicazione</h2><p>Test automatici controllano la detrazione, il corrispettivo del GSE, la tariffa premio CER e il bilancio energetico di ogni calcolo. Un valore anomalo blocca la pubblicazione.</p>
+    <h2>Ritmo</h2><p>Uno script ricarica ogni mese i prezzi del ritiro dedicato e ogni trimestre i prezzi ARERA. Tutti i testi sono rivisti almeno ogni {REVIEW_CYCLE_MONTHS} mesi e a ogni cambio di legge. Ciò che non è ancora pubblicato è indicato come « da pubblicare » e mai calcolato come valore certo.</p>
+    <h2>Gestione degli errori</h2>
+    <ol><li>Verifica sulla fonte primaria.</li><li>Correzione nel file di dati o nel simulatore, più un nuovo test che intercetti l'errore in futuro.</li><li>Nuova data su ogni pagina; una correzione sostanziale è segnalata sulla pagina interessata.</li></ol>
+    <h2>Indipendenza</h2><p>Nessun compenso da produttori di moduli, installatori, fornitori di energia o portali di confronto. Nessuna raccomandazione di prodotto, nessun link di affiliazione.</p>
+    <p>Vedi anche <a href={route('method', lang)}>Come calcoliamo</a>. Versione: {LAST_UPDATED}.</p>
+  </div>
+</PageLayout>

@@ -1,0 +1,21 @@
+{
+ "name": "Resa Fotovoltaico",
+ "short_name": "Resa FV",
+ "description": "Fotovoltaico 2026 nel tuo comune: produzione PVGIS, autoconsumo da consumi orari ARERA, ritiro dedicato GSE, detrazione 50 o 36 per cento e anni di rientro.",
+ "start_url": "/it/",
+ "display": "standalone",
+ "background_color": "#ffffff",
+ "theme_color": "#A8232B",
+ "icons": [
+  {
+   "src": "/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  }
+ ]
+}

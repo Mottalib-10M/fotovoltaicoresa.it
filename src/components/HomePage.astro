@@ -1,0 +1,87 @@
+---
+/**
+ * Pagina iniziale (pilastro, RECETTE §5): riga con la data dei dati, subito il simulatore, paragrafo citabile
+ * (ripiegato), classifica delle regioni come elenco con barre, le regole 2026 come fisarmonica, testo con
+ * mini-simulatori, FAQ e fonti. Struttura propria, diversa dagli altri siti del portafoglio (check-regles).
+ */
+import PageLayout from '../layouts/PageLayout.astro';
+import FvCalc from './calc/FvCalc';
+import MiniSim from './calc/MiniSim';
+import Clamp from './Clamp.astro';
+import { HOME } from '../content/home';
+import { route, ROUTES, type Locale } from '../i18n/routes';
+import { label } from '../i18n/nav';
+import { helpers } from '../lib/helpers';
+import { P, REGIONI, RID, type SourceKey } from '../lib/engine/params';
+import { valoreRidKwh } from '../lib/engine/fv';
+import { formatNumber, displayDate } from '../lib/format';
+import { faqSchema, organizationSchema, websiteSchema, webPageSchema, webApplicationSchema } from '../lib/seo';
+import { LAST_UPDATED, LANG_TAGS } from '../data/site-config';
+interface Props { lang: Locale }
+const { lang } = Astro.props;
+const it = lang === 'it';
+const x = HOME[lang];
+const h = helpers(lang);
+const path = route('home', lang);
+const parts = x.body(h).split(/<!--mini:([A-Za-z0-9_]+)-->/);
+const faqs = x.faqs(h);
+const keys: SourceKey[] = ['pvgis', 'arera_consumi', 'ade_misura', 'gse_rid', 'gse_rid_prezzi', 'arera_pmg', 'arera_q4', 'gse_ssp', 'arera_213', 'dm_cer', 'geonames'];
+const sources = keys.map((k) => ({ name: P.sources[k].label[lang], url: P.sources[k].url }));
+const jsonLd = [websiteSchema(lang), organizationSchema(lang), webPageSchema({ name: x.h1, description: x.description, path, lang }), webApplicationSchema({ name: x.h1, description: x.description, path, lang }), faqSchema(faqs, lang)];
+const n = (v: number, d = 0) => formatNumber(v, d, lang);
+const has = (id: string) => ROUTES.some((r) => r.id === id);
+const regioni = [...REGIONI].map((r, i) => ({ ...r, i, rid: valoreRidKwh(i) * 100 })).sort((a, b) => b.ey - a.ey);
+const lo = Math.min(...regioni.map((r) => r.ey)) - 60, hi = Math.max(...regioni.map((r) => r.ey));
+const regole = it ? [
+  { t: 'Scambio sul posto chiuso', d: `Nuove domande fino al ${displayDate(P.ssp.ultimo_giorno_domande, 'it-IT')}; chi installa oggi vende il surplus al GSE con il ritiro dedicato.`, id: 'scambio-sul-posto' },
+  { t: `Detrazione ${n(P.detrazione.aliquota_prima_casa * 100)} o ${n(P.detrazione.aliquota_altri * 100)} %`, d: `Prima casa del proprietario o altri immobili, su ${n(P.detrazione.tetto_eur)} € al massimo, in ${P.detrazione.rate} rate annuali.`, id: 'bonus-fotovoltaico' },
+  { t: `Prezzo minimo ${n(P.rid.pmg_eur_mwh, 1)} €/MWh`, d: 'Il GSE paga il prezzo zonale orario o, se più alto, il prezzo minimo garantito fissato da ARERA per il 2026.', id: 'ritiro-dedicato' },
+  { t: `Tariffa premio CER fino a ${n(P.cer.tip_max_eur_mwh)} €/MWh`, d: `Sull'energia condivisa in una comunità energetica, per ${P.cer.durata_anni} anni, più ${n(P.cer.correzione_nord)} €/MWh al Nord e ${n(P.cer.correzione_centro)} al Centro.`, id: 'comunita-energetiche' },
+] : [
+  { t: 'Net metering closed', d: `New applications until ${displayDate(P.ssp.ultimo_giorno_domande, 'en-GB')}; anyone installing today sells the surplus to the GSE under the ritiro dedicato.`, id: 'scambio-sul-posto' },
+  { t: `Deduction of ${n(P.detrazione.aliquota_prima_casa * 100)} or ${n(P.detrazione.aliquota_altri * 100)}%`, d: `Owner's main home or other property, on up to €${n(P.detrazione.tetto_eur)}, in ${P.detrazione.rate} annual instalments.`, id: 'bonus-fotovoltaico' },
+  { t: `Minimum price ${n(P.rid.pmg_eur_mwh, 1)} €/MWh`, d: 'The GSE pays the hourly zonal price or, if higher, the guaranteed minimum price set by ARERA for 2026.', id: 'ritiro-dedicato' },
+  { t: `Community premium up to ${n(P.cer.tip_max_eur_mwh)} €/MWh`, d: `On energy shared in a renewable energy community, for ${P.cer.durata_anni} years, plus ${n(P.cer.correzione_nord)} €/MWh in the North and ${n(P.cer.correzione_centro)} in the Centre.`, id: 'comunita-energetiche' },
+];
+const dt = (iso: string) => displayDate(iso, LANG_TAGS[lang]);
+---
+<PageLayout title={x.title} description={x.description} lang={lang} jsonLd={jsonLd} faqs={faqs} sources={sources}>
+  <header class="mb-4">
+    <p class="text-sm font-semibold uppercase tracking-wide text-accent-700">{it ? `PVGIS per 7 896 comuni · ritiro dedicato GSE fino a ${RID.ultimo_mese} · aggiornato il ${dt(LAST_UPDATED)}` : `PVGIS for 7,896 comuni · GSE prices to ${RID.ultimo_mese} · updated ${dt(LAST_UPDATED)}`}</p>
+    <h1 class="mt-1 text-3xl font-bold text-navy-900 md:text-[2.4rem] md:leading-tight">{x.h1}</h1>
+    <p class="mt-2 text-lg text-navy-700">{x.intro}</p>
+    <p class="mt-2 text-sm text-navy-700"><a class="underline" href={route('method', lang)}>{label('method', lang)}</a> · <a class="underline" href={route('about', lang)}>{label('about', lang)}</a></p>
+  </header>
+  <div id="simulatore" data-outil>
+    <FvCalc client:load lang={lang} vista="rendimento" methodHref={route('method', lang)} />
+  </div>
+  <Clamp text={x.resume(h)} lang={lang} id="clamp-home" sentences={2} class="mt-8" />
+  <section class="mt-10 border-t border-navy-200 pt-6" aria-labelledby="regioni" data-chrome>
+    <h2 id="regioni" class="text-2xl font-bold text-navy-900">{it ? 'Resa per regione e valore del surplus' : 'Yield by region and value of the surplus'}</h2>
+    <p class="mt-2 text-navy-700">{it ? 'kWh per kWp a 30° sud, media dei comuni pesata sulla popolazione (PVGIS), e valore stimato di un kWh immesso con il ritiro dedicato nella zona di mercato (GSE 2026).' : 'kWh per kWp at 30° south, population-weighted average of the comuni (PVGIS), and the estimated value of an exported kWh under the ritiro dedicato in the market zone (GSE 2026).'}</p>
+    <ol class="mt-4 grid gap-x-8 gap-y-1.5 sm:grid-cols-2">
+      {regioni.map((r) => (
+        <li class="flex items-center gap-3 text-sm">
+          <span class="w-36 shrink-0 truncate text-navy-900">{it ? r.nome : r.en}</span>
+          <span class="land-bar block h-2.5 flex-1 overflow-hidden rounded"><span class="block h-2.5" style={`width:${Math.round((r.ey - lo) / (hi - lo) * 100)}%`}></span></span>
+          <span class="tabular-nums w-12 text-right text-navy-800">{n(r.ey)}</span>
+          <span class="tabular-nums w-20 text-right text-navy-600">{n(r.rid, 1)} c€</span>
+        </li>
+      ))}
+    </ol>
+  </section>
+  <section class="mt-10 border-t border-navy-200 pt-6" aria-labelledby="regole" data-chrome>
+    <h2 id="regole" class="text-2xl font-bold text-navy-900">{it ? 'Cosa vale per chi installa nel 2026' : 'What applies if you install in 2026'}</h2>
+    <div class="mt-4 grid gap-3 sm:grid-cols-2">
+      {regole.map((r) => (
+        <details class="rounded-lg border border-navy-200 bg-white px-4 py-3">
+          <summary class="cursor-pointer font-serif text-lg font-semibold text-navy-900">{r.t}</summary>
+          <p class="mt-2 text-sm text-navy-700">{r.d} {has(r.id) && <a class="underline" href={route(r.id, lang)}>{label(r.id, lang)}</a>}</p>
+        </details>
+      ))}
+    </div>
+  </section>
+  <div class="prose prose-slate mt-10 max-w-none border-t border-navy-200 pt-4">
+    {parts.map((p, i) => i % 2 === 0 ? <Fragment set:html={p} /> : <MiniSim client:load kind={p} lang={lang} href={has('costo-impianto-fotovoltaico') ? route('costo-impianto-fotovoltaico', lang) : undefined} />)}
+  </div>
+</PageLayout>

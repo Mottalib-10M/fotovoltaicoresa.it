@@ -1,0 +1,29 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { AUTHOR_NAME, CONTACT_EMAIL, LAST_UPDATED, REVIEW_CYCLE_MONTHS, SITE_NAMES } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+const lang = 'en';
+---
+<PageLayout title={`Editorial Policy of ${SITE_NAMES[lang]}: Sources and Checks`} description="Where radiation, hourly consumption, ritiro dedicato prices and tax deduction rates come from, how often they are checked, who is responsible and what happens when a figure is wrong." lang={lang} noindex={true} breadcrumbs={[{ label: 'Editorial policy' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none">
+    <h1>Editorial policy and corrections</h1>
+    <p>Anyone who spends thousands of euros on a system after reading this site relies on our figures. So here is where each one comes from and what happens when one is wrong.</p>
+    <h2>Responsibility</h2><p>Content and calculators are the responsibility of {AUTHOR_NAME}. Contact: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
+    <h2>Primary sources only</h2>
+    <ul>
+      <li><strong>European Commission PVGIS</strong> (Joint Research Centre): radiation and output at any location;</li>
+      <li><strong>ARERA</strong>, the energy regulator: hourly household withdrawals, reference customer prices, guaranteed minimum prices, net metering resolutions;</li>
+      <li><strong>GSE</strong>: ritiro dedicato prices, fees and energy community rules;</li>
+      <li><strong>Agenzia delle Entrate and Normattiva</strong>: tax deduction, rates and spending caps;</li>
+      <li><strong>Ministry of Environment and Energy Security</strong>: the energy community decree;</li>
+      <li><strong>GeoNames</strong>: list of comuni with ISTAT codes and coordinates.</li>
+    </ul>
+    <p>Supplier pages, installer blogs and other calculators are not sources: we cite only official texts and public data.</p>
+    <h2>Checks before every release</h2><p>Automated tests check the deduction, the GSE fee, the energy community premium and the energy balance of every calculation. A deviating value stops the release.</p>
+    <h2>Rhythm</h2><p>A script reloads ritiro dedicato prices every month and ARERA prices every quarter. All texts are reviewed at least every {REVIEW_CYCLE_MONTHS} months and whenever the law changes. Anything not yet published is shown as « to be published » and never calculated as a certain value.</p>
+    <h2>Handling errors</h2>
+    <ol><li>Check against the primary source.</li><li>Fix in the data file or calculator, plus a new test that catches the error in future.</li><li>New date on every page; a substantive correction is noted on the page concerned.</li></ol>
+    <h2>Independence</h2><p>No money from panel makers, installers, energy suppliers or comparison portals. No product recommendations, no affiliate links.</p>
+    <p>See also <a href={route('method', lang)}>How we calculate</a>. Version: {LAST_UPDATED}.</p>
+  </div>
+</PageLayout>

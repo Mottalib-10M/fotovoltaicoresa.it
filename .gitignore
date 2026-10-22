@@ -1,0 +1,7 @@
+node_modules
+dist
+.astro
+research/pvgis-cache
+research/pvgis-ore
+research/arera/consumi
+research/geonames

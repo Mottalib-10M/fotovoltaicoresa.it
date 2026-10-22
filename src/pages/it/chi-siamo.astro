@@ -1,0 +1,29 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { YEAR, LAST_UPDATED, AUTHOR_NAME, CONTACT_EMAIL, AUTHOR_ROLE, SITE_NAMES, LANG_TAGS } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+import { personSchema, organizationSchema, breadcrumbSchema, profilePageSchema } from '../../lib/seo';
+import { displayDate, formatNumber } from '../../lib/format';
+import { ITALIA } from '../../lib/engine/params';
+const lang = 'it';
+---
+<PageLayout title="Simulatore fotovoltaico 2026: chi lo pubblica, quali dati" description="Chi siamo nel 2026: chi pubblica il simulatore fotovoltaico per comune, da dove vengono produzione, consumi e prezzi e come verifichiamo i calcoli ogni mese." lang={lang} jsonLd={[personSchema(lang), organizationSchema(lang), profilePageSchema({ path: route('about', lang), lang }), breadcrumbSchema([{ name: 'Inizio', path: route('home', lang) }, { name: 'Chi siamo', path: route('about', lang) }])]} breadcrumbs={[{ label: 'Chi siamo' }]}>
+  <header class="mb-6"><h1 class="text-3xl font-bold text-navy-900 md:text-4xl">Chi siamo</h1></header>
+  <div class="prose prose-slate max-w-none">
+    <div class="not-prose mb-6"><p class="text-lg font-semibold text-navy-900">{AUTHOR_NAME}</p><p class="text-navy-700">{AUTHOR_ROLE[lang]}</p></div>
+    <p>{SITE_NAMES.it} è pubblicato da Radif Partners. Questo sito calcola quanto produce un impianto fotovoltaico nel vostro comune, quanta di quell'energia userete in casa, quanto vale il resto ceduto alla rete e in quanti anni rientra la spesa. Non vende impianti, non chiede telefono né e-mail e tiene conto delle regole del 2026: lo scambio sul posto è chiuso alle nuove domande dal settembre 2025.</p>
+    <h2>Come calcoliamo</h2>
+    <p>Calcoliamo con la produzione PVGIS di {formatNumber(ITALIA.n_comuni, 0, lang)} comuni, uno per uno, con i consumi orari delle famiglie misurati da ARERA invece di una percentuale fissa, con i prezzi del ritiro dedicato pubblicati dal GSE per la vostra zona e con la detrazione come la descrive l'Agenzia delle Entrate. Il risultato compare prima che scriviate qualunque cosa e cambia a ogni modifica.</p>
+    <h2>Come verifichiamo</h2>
+    <p>Prima di ogni pubblicazione girano test automatici: bilancio energetico di ogni calcolo, detrazione, corrispettivo GSE, tariffa premio delle comunità energetiche. Come nasce ogni numero è spiegato in <a href={route('method', lang)}>Come calcoliamo</a>.</p>
+    <h2>Che cosa non siamo</h2>
+    <p>Non siamo installatori, fornitori di energia, distributori, né il GSE, ARERA o l'Agenzia delle Entrate, e non parliamo a loro nome. Non vendiamo impianti, non passiamo richieste a nessuno e non riceviamo denaro per una raccomandazione.</p>
+    <h2>Finanziamento e dati</h2>
+    <p>Il simulatore è gratuito e senza account. Comune, consumi e prezzi restano nel vostro browser. Se un giorno il sito mostrasse pubblicità, non starebbe mai sopra un simulatore.</p>
+    <h2>In inglese</h2>
+    <p>Ogni pagina esiste anche in inglese, scritta per chi vive in Italia e impara ora i termini italiani: ritiro dedicato, scambio sul posto, detrazione sono spiegati, gli importi restano in euro.</p>
+    <h2>Contatti</h2>
+    <p>Un valore non torna, una frase è superata, il vostro impianto produce diversamente? Scrivete a <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. Vedi anche i <a href={route('editorial', lang)}>principi editoriali</a> e le <a href={route('terms', lang)}>note legali</a>.</p>
+    <p class="text-sm text-navy-600">Dati {YEAR}, letti il <time datetime={LAST_UPDATED}>{displayDate(LAST_UPDATED, LANG_TAGS[lang])}</time>.</p>
+  </div>
+</PageLayout>
