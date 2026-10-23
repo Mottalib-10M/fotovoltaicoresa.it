@@ -104,13 +104,17 @@ const browser = await chromium.launch();
 const desk = await browser.newPage({ viewport: { width: 1366, height: 768 } });
 const phone = await browser.newPage({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true });
 let fautes = 0, avecSimu = 0;
+// Une mesure qui ne rend jamais la main ne doit pas garder le verrou Playwright (25 min bloquées
+// sur us-heating-oil-propane, 2026-10-22) : 15 s par mesure, 20 min pour tout le contrôle.
+const borne = (p, ms = 15000) => Promise.race([p, new Promise((r) => setTimeout(() => r(null), ms))]);
+setTimeout(() => { console.log('check-premier-ecran : délai global de 20 min dépassé'); process.exit(2); }, 20 * 60 * 1000).unref();
 for (const u of urls) {
   const errs = [];
   // Une page qui ne charge pas est une faute, pas une page « sans simulateur » : sous une
   // machine chargée, l'échec silencieux faisait passer 26 pages sur 46 (2026-10-11).
   const ok = await desk.goto(u, { waitUntil: 'networkidle', timeout: 60000 }).then((r) => !r || r.ok()).catch(() => false);
   if (!ok) { fautes++; console.log(`✗ ${new URL(u).pathname}\n   - page non chargée (délai ou erreur) : relancer`); continue; }
-  const d = await desk.evaluate(mesure).catch(() => null);
+  const d = await borne(desk.evaluate(mesure).catch(() => null));
   if (!d) continue;
   avecSimu++;
   if (d.top > d.h * 0.6) errs.push(`ordinateur : premier champ à ${d.top} px (limite ${Math.round(d.h * 0.6)})`);
@@ -118,7 +122,7 @@ for (const u of urls) {
   else if (d.resTop > d.h - 40) errs.push(`ordinateur : résultat à ${d.resTop} px, hors du premier écran (${d.h})`);
   if (d.lourds.length) errs.push(`bloc lourd au-dessus du simulateur : ${d.lourds.join(', ')}`);
   await phone.goto(u, { waitUntil: 'networkidle', timeout: 60000 }).catch(() => {});
-  const m = await phone.evaluate(mesure).catch(() => null);
+  const m = await borne(phone.evaluate(mesure).catch(() => null));
   if (m && m.top > m.h - 60) errs.push(`téléphone : premier champ à ${m.top} px, hors du premier écran (${m.h})`);
   if (errs.length) { fautes++; console.log(`✗ ${new URL(u).pathname}\n   - ${errs.join('\n   - ')}`); }
 }
