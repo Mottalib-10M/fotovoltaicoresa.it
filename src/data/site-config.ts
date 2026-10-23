@@ -1,5 +1,5 @@
 /** Configuration centrale du site (générée par new-site.py). */
-export const SITE_URL = "https://it-fotovoltaico.example";
+export const SITE_URL = "https://fotovoltaicoresa.it";
 export const SITE_NAMES: Record<string, string> = {"it": "Resa Fotovoltaico", "en": "Resa Fotovoltaico"};
 export const LANG_TAGS: Record<string, string> = {"it": "it-IT", "en": "en-IT"};
 export const OG_LOCALES: Record<string, string> = {"it": "it_IT", "en": "en_GB"};
@@ -18,7 +18,7 @@ export const AUTHOR_DESC: Record<string, string> = {"it": "Radif Partners ha int
  *  themes reellement traites par le site, pas une liste de mots-cles : un sujet
  *  declare ici sans page qui le couvre est une declaration fausse. */
 export const KNOWS_ABOUT: Record<string, string[]> = {"it": ["Produzione fotovoltaica per comune (PVGIS)", "Autoconsumo e accumulo domestico", "Ritiro dedicato GSE e prezzi minimi garantiti", "Detrazione per ristrutturazione applicata al fotovoltaico", "Comunità energetiche rinnovabili e tariffa premio"], "en": ["Solar output by Italian comune (PVGIS)", "Self-consumption and home batteries in Italy", "GSE ritiro dedicato and guaranteed minimum prices", "Italian home-renovation tax deduction for solar", "Italian renewable energy communities and the premium tariff"]};
-export const CONTACT_EMAIL = "contatti@it-fotovoltaico.example";
+export const CONTACT_EMAIL = "contatti@fotovoltaicoresa.it";
 export const THEME_COLOR = '#A8232B';
 export const LOGO_SYMBOL = 'PV';
 export const BING_VERIFY_CODE = '';
