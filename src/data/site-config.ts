@@ -1,6 +1,8 @@
 /** Configuration centrale du site (générée par new-site.py). */
 export const SITE_URL = "https://fotovoltaicoresa.it";
-export const SITE_NAMES: Record<string, string> = {"it": "Resa Fotovoltaico", "en": "Resa Fotovoltaico"};
+// Partie du nom en couleur dans l'en-tete ('' = aucune).
+export const BRAND_ACCENT = 'Resa';
+export const SITE_NAMES: Record<string, string> = {"it": "Fotovoltaico Resa", "en": "Fotovoltaico Resa"};
 export const LANG_TAGS: Record<string, string> = {"it": "it-IT", "en": "en-IT"};
 export const OG_LOCALES: Record<string, string> = {"it": "it_IT", "en": "en_GB"};
 export const LOCALE_TAG = 'it-IT';

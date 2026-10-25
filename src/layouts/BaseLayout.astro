@@ -3,7 +3,7 @@ import { displayDate } from '../lib/format';
 import '../styles/global.css';
 import ConsentBanner from '../components/ConsentBanner.astro';
 import { consentStrings } from '../data/consent-strings';
-import { SITE_URL, YEAR, LAST_UPDATED, BING_VERIFY_CODE, GOOGLE_VERIFY_CODE, CONSENT_MODE, GA4_ID, CLARITY_ID, THEME_COLOR, AUTHOR_NAME, SITE_NAMES, LANG_TAGS, OG_LOCALES, LOGO_SYMBOL } from '../data/site-config';
+import { SITE_URL, YEAR, LAST_UPDATED, BING_VERIFY_CODE, GOOGLE_VERIFY_CODE, CONSENT_MODE, GA4_ID, CLARITY_ID, THEME_COLOR, AUTHOR_NAME, SITE_NAMES, BRAND_ACCENT, LANG_TAGS, OG_LOCALES, LOGO_SYMBOL } from '../data/site-config';
 import { t } from '../i18n/ui';
 import { altPaths, route, LOCALES, DEFAULT_LOCALE, type Locale } from '../i18n/routes';
 import { navCategories, navDirect, footerColumns, popularLinks } from '../i18n/nav';
@@ -11,6 +11,8 @@ import { navCategories, navDirect, footerColumns, popularLinks } from '../i18n/n
 interface BreadcrumbItem { label: string; href?: string }
 interface Props { title: string; description: string; lang: Locale; canonical?: string; ogImage?: string; noindex?: boolean; jsonLd?: string[]; breadcrumbs?: BreadcrumbItem[] }
 const { title, description, lang, canonical, ogImage, noindex = false, jsonLd = [], breadcrumbs = [] } = Astro.props;
+// Nom du site = mots du domaine ; BRAND_ACCENT (une partie du nom) s'affiche en couleur dans l'en-tete.
+const marque = (() => { const nom = SITE_NAMES[lang]; const i = BRAND_ACCENT ? nom.lastIndexOf(BRAND_ACCENT) : -1; return i < 0 ? { avant: nom, accent: '', apres: '' } : { avant: nom.slice(0, i), accent: BRAND_ACCENT, apres: nom.slice(i + BRAND_ACCENT.length) }; })();
 const ui = t(lang);
 const pathname = Astro.url.pathname;
 const canonicalUrl = canonical ?? `${SITE_URL}${pathname}`;
@@ -104,7 +106,7 @@ const crumbAside = Astro.slots.has('crumb-aside') ? (await Astro.slots.render('c
       <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
         <a href={homeHref} class="shrink-0 whitespace-nowrap flex items-center gap-2 font-bold text-navy-900">
           <img src="/logo.svg" class="h-8 w-8" width="32" height="32" alt="" />
-          <span>{SITE_NAMES[lang]}</span>
+          <span>{marque.avant}{marque.accent && <span class="text-accent-500">{marque.accent}</span>}{marque.apres}</span>
         </a>
         <div class="hidden items-center gap-1 xl:flex">
           {cats.map((cat, idx) => (

@@ -16,9 +16,9 @@ import { SITE_URL } from '../../data/site-config';
   <body class="bg-white p-2 text-navy-900">
     <div id="it-view"><FvCalc client:load lang="it" idp="emit" /></div>
     <div id="en-view" hidden><FvCalc client:load lang="en" idp="emen" /></div>
-    <p class="mt-2 text-center text-xs text-navy-600"><a id="credit" href={`${SITE_URL}/it/`} target="_blank" rel="noopener" class="underline">Simulatore fotovoltaico 2026 · Resa Fotovoltaico</a></p>
+    <p class="mt-2 text-center text-xs text-navy-600"><a id="credit" href={`${SITE_URL}/it/`} target="_blank" rel="noopener" class="underline">Simulatore fotovoltaico 2026 · Fotovoltaico Resa</a></p>
     <script is:inline>
-      if (new URLSearchParams(location.search).get('lang') === 'en') { document.getElementById('it-view').hidden = true; document.getElementById('en-view').hidden = false; document.documentElement.lang = 'en'; var c = document.getElementById('credit'); c.textContent = 'Solar calculator 2026 · Resa Fotovoltaico'; c.href = c.href.replace('/it/', '/en/'); }
+      if (new URLSearchParams(location.search).get('lang') === 'en') { document.getElementById('it-view').hidden = true; document.getElementById('en-view').hidden = false; document.documentElement.lang = 'en'; var c = document.getElementById('credit'); c.textContent = 'Solar calculator 2026 · Fotovoltaico Resa'; c.href = c.href.replace('/it/', '/en/'); }
     </script>
   </body>
 </html>
